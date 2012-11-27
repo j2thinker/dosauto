@@ -1,0 +1,12 @@
+2012/11/27 02:46:22 [error] [php] mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() (E:\dosauto\protected\controllers\SiteController.php:67)
+Stack trace:
+#0 E:\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 E:\yii\framework\web\CController.php(286): SiteController->runAction()
+#2 E:\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 E:\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#4 E:\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 E:\yii\framework\base\CApplication.php(168): CWebApplication->processRequest()
+#6 E:\dosauto\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/contact
+in E:\dosauto\protected\controllers\SiteController.php (67)
+in E:\dosauto\index.php (13)
