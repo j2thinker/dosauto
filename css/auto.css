@@ -1,0 +1,148 @@
+@charset "utf-8";
+body { margin:0px; padding:0px;}
+img { border:0px;}
+ul,li { list-style:none; margin:0px; padding:0px;}
+* { font-family:"宋体";}
+
+.zuo { float:left;}
+.you { float:right;}
+.qingchu { clear:both; height:0px; line-height:0px; font-size:0px;}
+.yincang { display:none;}
+.kuai { display:block;}
+
+.hui_12 { color:#9C9C9C; font-size:12px;}
+.hui_12 a:link,.hui_12 a:visited { color:#9C9C9C; font-size:12px;  text-decoration: none;}
+.hui_12 a:hover { color:#2374AC;}
+.huis_12 { color:#676767; font-size:12px;}
+.huis_12 a:link,.huis_12 a:visited { color:#676767; font-size:12px;  text-decoration: none;}
+.huis_12 a:hover { color:#2374AC;}
+.hui_16 { color:#999999; font-size:14px; font-weight:bold; font-family:"黑体";}
+
+.lai_14 { color:#496C96; font-size:14px;}
+.lai_12 { color:#496C96; font-size:12px;}
+
+.hei_12 { font-size:12px; color:#343434;}
+.hei_18 { font-size:18px; color:#343434; font-family:"黑体"; line-height:40px;}
+.hei_16 { font-size:16px; color:#343434; font-family:"黑体";}
+.hei_14 { font-size:14px; color:#343434; font-family:"黑体"; line-height:30px; }
+.yingziti { font-family:Arial;}
+.hangg { line-height:16px;}
+.hangg2 { line-height:18px;}
+
+
+.bd_wbk { width:135px; height:16px; border:1px solid #E9E9E9;}
+.bd_sousuo {width:43px; height:20px; background:url(/images/an_sousuo_bei.jpg) no-repeat; color:#FFF; font-size:12px; border:0px;}
+
+.zongk { width:1090px; margin:0px auto;}
+
+.dingk { height:80px; padding-left:70px; padding-right:52px; background:url(/images/ding_bei.jpg) repeat-x;}
+.dingk .biaozhik { width:160px; height:80px; float:left;}
+.dingk .sousuok { width:732px; float:right; padding-top:15px; padding-right:18px;}
+.dingk .daohangk { width:750px; float:right; padding-top:15px;}
+.dingk .daohangk ul li {float:right; width:85px; height:25px; line-height:25px; text-align:center;}
+.dingtuk { height:400px;}
+.dingtuk img { width:1090px; height:400px;}
+.sy_chexingk { height:170px; background:url(/images/sy_chexing_bei.jpg) repeat-x; padding-top:20px;}
+.sy_chexingk .jtk { padding-left:10px; padding-right:10px; padding-top:60px;}
+.sy_chexingk .cxk { margin:0px auto; width:1000px; +float:left;}
+.sy_chexingk ul li { width:135px; float:left; padding-left:15px; padding-right:15px;}
+
+
+.sy_biaotik { padding-top:25px; padding-bottom:15px;}
+.sy_biaotik2 { padding-top:1px; padding-bottom:10px;}
+.sy_xwk { width:642px; float:left; padding-left:52px;}
+.sy_xwk .jtk { width:30px; padding-top:20px;}
+.sy_xwk .xwk { margin:0px auto; width:580px; +float:left;}
+.sy_xwk ul li { width:260px; float:left; padding-left:14px; padding-right:12px;}
+.sy_xwk ul li img { width:260px; height:73px;}
+.sy_xwk .dtk { padding-top:25px;}
+
+.sy_hdk { width:320px; float:right; padding-right:56px;}
+
+
+.di_dhk { padding-left:50px; padding-right:5px;}
+.di_dhk a:link,.di_dhk a:visited {color:#676767; text-decoration: none;}
+.di_dhk a:hover { color:#2374AC;}
+.dik { padding-left:72px; padding-right:72px; padding-top:30px; margin-top:30px; height:60px; background:url(/images/di_bei.jpg) repeat-x top;}
+.dik .ybk { border-right:1px solid #CDCDCD;}
+
+
+.gs_btk { width:938px; height:43px; background:#F5F5F5; margin:0px auto; padding-left:26px; padding-right:26px; padding-top:22px;}
+.gs_lbk { width:990px; margin:0px auto; background:#EBEBEB; height:30px;}
+.gs_lbk ul li { float:left; width:106px; border-right:1px solid #DBDBDB; text-align:center; line-height:30px;}
+.gs_lbk .hli { border-right:0px;}
+.gs_lbk .dqli { background:#999999; color:#FFF;}
+.gs_lbk a:link,.gs_lbk a:visited {color:#343434;	text-decoration: none;}
+.gs_lbk a:hover { color:#2374AC;}
+
+.gs_zhutik { width:958px; margin:0px auto; padding-left:16px; padding-right:16px; padding-top:28px; padding-bottom:40px;}
+.gs_zhutik .gs_zttuk {width:450px; height:230px; padding-left:20px; padding-bottom:20px; float:right;}
+.gs_zhutik .gs_zttuk img { width:450px; height:230px;}
+.gs_zhutik .gs_lstuk { padding-top:15px; padding-bottom:15px; text-align:center;}
+.gs_zhutik .gs_lxk { width:350px; float:left; padding-left:30px;}
+.gs_zhutik .gs_lxtuk { width:500px; float:left;}
+.gs_jiaruk { width:680px; margin:0px auto; padding-left:30px; padding-right:280px; padding-top:28px; padding-bottom:40px;}
+.gs_jiaruk .gs_zplbk { height:41px;}
+.gs_jiaruk .gs_zplbk ul li { float:left; width:80px; height:41px; margin-right:20px; text-align:center; line-height:25px;}
+.gs_jiaruk .gs_zplbk .dqli { background:url(/images/gs_jiaru_lbbei.jpg) no-repeat; color:#2374AC;}
+.gs_jiaruk .gs_zpnrk { width:236px; height:95px; background:url(/images/gs_jiaru_nrbei.jpg) no-repeat; padding:20px;}
+.gs_jiaruk .gs_zpnrk ul li { width:118px; float:left; height:26px;}
+.gs_jiaruk .gs_zpxmk { padding-top:40px;}
+.gs_jiaruk .gs_zpbtk { border-bottom:1px dotted #AEAEAE; height:28px;}
+.gs_jiaruk .gs_zpyqk { padding-top:10px;}
+
+
+.xw_zhutik { width:930px; margin:0px auto; padding-left:60px; padding-top:28px; padding-bottom:40px;}
+.xw_zhutik ul li { width:266px; height:220px; padding-right:35px; float:left;}
+.xw_zhutik ul li img { width:257px; height:110px; border:3px solid #CCCCCC;}
+.xw_xqk { width:930px; margin:0px auto; padding-left:30px; padding-right:30px; padding-top:28px; padding-bottom:50px;}
+.xw_xqk .xw_nrk { width:100%; padding-top:10px;}
+.xw_tgk { width:900px; margin:0px auto; padding-left:90px; padding-top:30px; padding-bottom:40px;}
+.xw_tgk ul li { width:380px; float:left; padding-right:50px; padding-bottom:40px;}
+.xw_tgk ul li img { width:340px; height:310px; }
+.xw_tgk ul li .animg { width:100px; height:40px; float:right;}
+.xw_fuwuk { width:990px; margin:0px auto; padding-top:10px; padding-bottom:40px;}
+.xw_fuwuk .xw_fwbtk { padding-left:30px; padding-right:20px; padding-top:20px; padding-bottom:10px;}
+.xw_fuwuk .xw_fwnrbtk { border-bottom:1px solid #D5D5D5; padding-left:30px; padding-right:20px; background:#EBEBEB; height:23px; padding-top:7px; _height:20px; _padding-top:10px; }
+.xw_fuwuk .xw_fwnrbtk a:link { color:#2374AC;}
+.xw_fuwuk .xw_fwnrbtk a:visited { color:#2374AC;}
+.xw_fuwuk .xw_fwnrbtk a:hover { color:#676767;}
+.xw_fuwuk .xw_fwnrk { padding-left:30px; padding-right:20px; background:#F9F9F9; padding-top:10px; padding-bottom:10px;}
+.xw_fuwuk .xw_fwnrk .xw_tuk { float:right; width:255px; overflow:hidden;}
+.xw_fuwuk .xw_fwnrk .xw_wbk { float:left; width:630px;}
+.ym_k { width:100%; text-align:center;}
+.ym_k span { border:1px solid #999999; width:18px; height:19px; padding:2px 4px 2px 4px;}
+.ym_k span a:link { color:#343434;}
+.ym_k span a:visited { color:#343434; }
+.ym_k span a:hover { color:#2374AC; }
+.ym_k .dqspan { border:1px solid #343434;}
+
+
+
+
+
+
+
+
+
+
+
+
+#nav a { display: block; text-align:center; } /*一级菜单链接总体样式：每个菜单的宽，居中对齐，文字大小*/ 
+#nav a:link { color:#676767; text-decoration:none;margin:0;}     /* 未访问的链接 */   
+#nav a:visited {color:#676767; text-decoration:none;margin:0;}    /* 已访问的颜色 */ 
+#nav a:hover {color:#2374AC;text-decoration:none;}                /* 鼠标在链接上 */
+
+#nav li {float:right;} 
+#nav li:hover{background:#E1E7E8;}                  /* 一级菜左对齐 */ 
+#nav li a:hover{background:#E1E7E8;}     /* 鼠标在一级菜单上改变其背景色 */ 
+#nav li ul {list-style-type:none; left:-130px; width:120px; position:absolute; background:#fff; border:1px solid #E1E7E8; +margin-left:-42px;}             /*二级菜单总体样式：行高24px；背景颜色；外框宽度；相对位置；边框一个象素，上边没样式，左右下边实线，边框颜色#003399；内边距1个象素*/
+#nav li ul li { border-bottom:1px solid #FFF; text-align:center; border-right:0px;}
+#nav li ul a{ display:block; width: 120px; margin-left:-18px; border-bottom:1px solid #CFD7D9;}                 /* 二级菜单链接样式；背景宽度、左对齐，左缩进2 */
+#nav li ul a:link {color:#676767; text-decoration:none; margin-left:-35px; _margin-left:0px; text-align:left; padding-left:18px; width:102px;}                                   /* 未访问的链接 */ 
+#nav li ul a:visited {color:#676767;text-decoration:none; margin-left:-35px; _margin-left:0px; text-align:left; padding-left:18px; width:102px;}                                 /* 已访问的链接 */
+#nav li ul a:hover {color:#2374AC; text-decoration:none; background: url(/images/daohang_bei.jpg) no-repeat #E1E7E8; margin-left:-35px; _margin-left:0px; text-align:left; padding-left:18px; width:102px;}/* 鼠标在链接上 */
+
+#nav li:hover ul {left: auto;}
+#nav li.sfhover ul {left: auto;}
+#content {clear: left;}

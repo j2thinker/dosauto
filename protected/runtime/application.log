@@ -10,3 +10,69 @@ Stack trace:
 REQUEST_URI=/index.php?r=site/contact
 in E:\dosauto\protected\controllers\SiteController.php (67)
 in E:\dosauto\index.php (13)
+2012/11/27 15:22:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tupian".' in E:\yii\framework\web\CController.php:484
+Stack trace:
+#0 E:\yii\framework\web\CController.php(271): CController->missingAction('tupian')
+#1 E:\yii\framework\web\CWebApplication.php(283): CController->run('tupian')
+#2 E:\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/tupian/bia...')
+#3 E:\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\dosauto\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/tupian/biaozhi.jpg
+HTTP_REFERER=http://zf.cn/index.php/site/test
+---
+2012/11/27 15:22:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tupian".' in E:\yii\framework\web\CController.php:484
+Stack trace:
+#0 E:\yii\framework\web\CController.php(271): CController->missingAction('tupian')
+#1 E:\yii\framework\web\CWebApplication.php(283): CController->run('tupian')
+#2 E:\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/tupian/di_...')
+#3 E:\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\dosauto\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/tupian/di_apptu.jpg
+HTTP_REFERER=http://zf.cn/index.php/site/test
+---
+2012/11/27 15:23:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tupian".' in E:\yii\framework\web\CController.php:484
+Stack trace:
+#0 E:\yii\framework\web\CController.php(271): CController->missingAction('tupian')
+#1 E:\yii\framework\web\CWebApplication.php(283): CController->run('tupian')
+#2 E:\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/tupian/bia...')
+#3 E:\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\dosauto\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/tupian/biaozhi.jpg
+HTTP_REFERER=http://zf.cn/index.php/site/test
+---
+2012/11/27 15:23:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tupian".' in E:\yii\framework\web\CController.php:484
+Stack trace:
+#0 E:\yii\framework\web\CController.php(271): CController->missingAction('tupian')
+#1 E:\yii\framework\web\CWebApplication.php(283): CController->run('tupian')
+#2 E:\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/tupian/di_...')
+#3 E:\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\dosauto\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/tupian/di_apptu.jpg
+HTTP_REFERER=http://zf.cn/index.php/site/test
+---
+2012/11/27 15:24:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tupian".' in E:\yii\framework\web\CController.php:484
+Stack trace:
+#0 E:\yii\framework\web\CController.php(271): CController->missingAction('tupian')
+#1 E:\yii\framework\web\CWebApplication.php(283): CController->run('tupian')
+#2 E:\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/tupian/bia...')
+#3 E:\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\dosauto\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/tupian/biaozhi.jpg
+HTTP_REFERER=http://zf.cn/index.php/site/test
+---
+2012/11/27 15:24:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tupian".' in E:\yii\framework\web\CController.php:484
+Stack trace:
+#0 E:\yii\framework\web\CController.php(271): CController->missingAction('tupian')
+#1 E:\yii\framework\web\CWebApplication.php(283): CController->run('tupian')
+#2 E:\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/tupian/di_...')
+#3 E:\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\dosauto\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/tupian/di_apptu.jpg
+HTTP_REFERER=http://zf.cn/index.php/site/test
+---
