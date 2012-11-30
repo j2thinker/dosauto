@@ -41,4 +41,34 @@ document.getElementById('jt8-2').style.display=document.getElementById('jt8-2').
 }
 
 
+function estu(i){
+	   switch(i){
+	   case 1:
+	   document.getElementById("estu1").style.display="block";
+	   document.getElementById("estu2").style.display="none";
+	   document.getElementById("estu3").style.display="none";
+	   document.getElementById("estu4").style.display="none";
+	   break;
+	   case 2:
+	   document.getElementById("estu1").style.display="none";
+	   document.getElementById("estu2").style.display="block";
+	   document.getElementById("estu3").style.display="none";
+	   document.getElementById("estu4").style.display="none";
+	   break;
+	   case 3:
+	   document.getElementById("estu1").style.display="none";
+	   document.getElementById("estu2").style.display="none";
+	   document.getElementById("estu3").style.display="block";
+	   document.getElementById("estu4").style.display="none";
+	   break;
+	   case 4:
+	   document.getElementById("estu1").style.display="none";
+	   document.getElementById("estu2").style.display="none";
+	   document.getElementById("estu3").style.display="none";
+	   document.getElementById("estu4").style.display="block";
+	   break;	  
+	   
+	   } 
+   }
+
 
