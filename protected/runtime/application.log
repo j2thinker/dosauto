@@ -76,3 +76,89 @@ Stack trace:
 REQUEST_URI=/index.php/site/tupian/di_apptu.jpg
 HTTP_REFERER=http://zf.cn/index.php/site/test
 ---
+2012/12/01 01:36:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xw_huodong.html".' in D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('xw_huodong.html')
+#1 D:\AppServ\www\zaifeng\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\AppServ\www\zaifeng\dosauto\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/xw_huodong.html
+HTTP_REFERER=http://auto.fei.com/
+---
+2012/12/01 01:36:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xw_gongsi.html".' in D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('xw_gongsi.html')
+#1 D:\AppServ\www\zaifeng\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\AppServ\www\zaifeng\dosauto\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/xw_gongsi.html
+HTTP_REFERER=http://auto.fei.com/xw_huodong.html
+---
+2012/12/01 01:36:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index.html".' in D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('index.html')
+#1 D:\AppServ\www\zaifeng\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\AppServ\www\zaifeng\dosauto\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.html
+HTTP_REFERER=http://auto.fei.com/xw_gongsi.html
+---
+2012/12/01 01:36:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index.html".' in D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('index.html')
+#1 D:\AppServ\www\zaifeng\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\AppServ\www\zaifeng\dosauto\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.html
+HTTP_REFERER=http://auto.fei.com/index.html
+---
+2012/12/01 01:36:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index.html".' in D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('index.html')
+#1 D:\AppServ\www\zaifeng\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\AppServ\www\zaifeng\dosauto\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.html
+HTTP_REFERER=http://auto.fei.com/index.html
+---
+2012/12/01 01:38:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index.html".' in D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('index.html')
+#1 D:\AppServ\www\zaifeng\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\AppServ\www\zaifeng\dosauto\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.html
+---
+2012/12/01 01:38:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index.html".' in D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('index.html')
+#1 D:\AppServ\www\zaifeng\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\AppServ\www\zaifeng\dosauto\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.html
+---
+2012/12/01 01:38:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index.html".' in D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('index.html')
+#1 D:\AppServ\www\zaifeng\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\AppServ\www\zaifeng\dosauto\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.html
+HTTP_REFERER=http://auto.fei.com/index.html
+---
+2012/12/01 06:42:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\AppServ\www\zaifeng\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\AppServ\www\zaifeng\dosauto\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/12/01 06:42:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\AppServ\www\zaifeng\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\AppServ\www\zaifeng\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\AppServ\www\zaifeng\dosauto\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
