@@ -110,4 +110,20 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+	#简介页面，目前不做区分
+	public function actionIntro(){
+		$intro_type = $_GET['id'];
+		$model = new IntroduceForm();
+		$model->intro_type = $intro_type;
+		$model->limit = 1;
+		$model->state = 1;
+		$info = $model->get_list();
+		$content = "";
+		if($info && isset($info[0]) && isset($info[0]['content'])){
+			$content = $info[0]['content'];
+		}
+		$data['id'] = $intro_type;
+		$data['content'] = $content;
+		$this->render('intro', $data);
+	}
 }

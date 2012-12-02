@@ -2,7 +2,6 @@
 
 // change the following paths if necessary
 $yii=dirname(__FILE__).'./yii/framework/yii.php';
-//var_dump($yii);
 
 $config=dirname(__FILE__).'/protected/config/main.php';
 

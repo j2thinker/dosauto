@@ -9,6 +9,7 @@
 DROP TABLE  IF EXISTS `auto_introduce`;
 CREATE TABLE `auto_introduce`(
 `id` int(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`title` varchar(120) not null default '',
 `content` text,
 `ctime` int(10) unsigned not null,
 `state` tinyint(1) unsigned not null default 0,

@@ -98,13 +98,15 @@ return array(
 					"保养讲堂"=> "/newsman/classroom",
 				),
 			"introman"	=> array(
-					"公司简介"=>'/adintro/company',
-					"品牌历史"=>'/adintro/history',
-					"销售团队"=>'/adintro/sales',
-					"联系我们"=>'/adintro/contact',
-					"加入我们"=>'/adintro/joinus'	
+					"公司简介"=>'/adintro/company/1',
+					"品牌历史"=>'/adintro/company/2',
+					"销售团队"=>'/adintro/company/3',
+					"联系我们"=>'/adintro/company/4',
+					"加入我们-职位分类"=>'/adintro/joinuscat',
+					"加入我们-职位详情"=>'/adintro/joinus',
 				),		
 		),
+
 		'navname' => array(
 			"index"		=> "首页",
 			"newsman"	=> "新闻管理",
