@@ -103,12 +103,17 @@ return array(
 					"销售团队"=>'/adintro/sales',
 					"联系我们"=>'/adintro/contact',
 					"加入我们"=>'/adintro/joinus'	
-				),		
+				),
+			"tuan" => array(
+					"团购管理"=>"/tuan/list"
+				),
 		),
 		'navname' => array(
 			"index"		=> "首页",
 			"newsman"	=> "信息管理",
-			"introman"	=> "简介管理"
+			"introman"	=> "简介管理",
+			"tuan"		=> "团购信息",
+			"second"	=> "二手",
 		),
 		"cateinfo" => array(
 			1	=> '公司新闻' ,
