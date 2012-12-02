@@ -90,14 +90,15 @@ return array(
 		'adnav' => array(
 			"index"		=> array('轮播图管理'=>"/admin/switch"),
 			"newsman"	=> array(
-					"最新活动"=> "/newsman/activity",
-					"优惠促销"=> "/newsman/forsale",
-					"公司新闻"=> "/newsman/compnews",
-					"行业新闻"=> "/newsman/businews",
-					"衍生服务"=> "/newsman/service",
-					"保养讲堂"=> "/newsman/classroom",
+					"最新活动"=> "/newsman/activity?cid=3",
+					"优惠促销"=> "/newsman/forsale?cid=4",
+					"公司新闻"=> "/newsman/compnews?cid=1",
+					"行业新闻"=> "/newsman/businews?cid=2",
+					"衍生服务"=> "/newsman/service?cid=5",
+					"保养讲堂"=> "/newsman/classroom?cid=6",
 				),
 			"introman"	=> array(
+<<<<<<< HEAD
 					"公司简介"=>'/adintro/company/1',
 					"品牌历史"=>'/adintro/company/2',
 					"销售团队"=>'/adintro/company/3',
@@ -105,12 +106,33 @@ return array(
 					"加入我们-职位分类"=>'/adintro/joinuscat',
 					"加入我们-职位详情"=>'/adintro/joinus',
 				),		
+=======
+					"公司简介"=>'/adintro/company',
+					"品牌历史"=>'/adintro/history',
+					"销售团队"=>'/adintro/sales',
+					"联系我们"=>'/adintro/contact',
+					"加入我们"=>'/adintro/joinus'	
+				),
+			"tuan" => array(
+					"团购管理"=>"/tuan/list"
+				),
+>>>>>>> 97a0cbca24ce2b61a62b5ddc431660cb4fec2dcb
 		),
 
 		'navname' => array(
 			"index"		=> "首页",
-			"newsman"	=> "新闻管理",
-			"introman"	=> "简介管理"
+			"newsman"	=> "信息管理",
+			"introman"	=> "简介管理",
+			"tuan"		=> "团购信息",
+			"second"	=> "二手",
+		),
+		"cateinfo" => array(
+			1	=> '公司新闻' ,
+			2	=> '行业新闻' ,
+			3	=> '最新活动' ,
+			4	=> '优惠促销' ,
+			5	=> '衍生服务' ,
+			6	=> '保养讲堂'
 		)
 	),
 );

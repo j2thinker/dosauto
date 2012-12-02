@@ -20,6 +20,8 @@ body {
 			var img3 = "/images/admin/ico03.gif" ;
 			var parnav = $(this).attr("parnav") ;
 			var nextstate = $("#sub_" + parnav).css('display')== 'none'?'' :'none' ;
+			$("table[id^=sub_]").css('display' ,'none') ;
+			$("[id^=pic_]").attr('src' , img4)
 			$("#sub_" + parnav).css('display' ,nextstate) ;
 			var curpic = '' ;
 			curpic = (nextstate == 'none')?img4:img3 ;

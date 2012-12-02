@@ -16,7 +16,7 @@
 .nav{
 	width:100% ;
 	height:30px;
-	background-color:#FAFAFA;
+	background-color:#f5f5f5;
 	border-bottom:1px solid #EFEFEF;
 	float:left ;
 	text-align:left ;
