@@ -88,22 +88,27 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 		//后台导航左侧模块
 		'adnav' => array(
-			"首页"		=> array('轮播图管理'=>"/admin/switch"),
-			"新闻管理"	=> array(
-					"最新活动" => "/admin/activity",
-					"优惠促销"=> "/admin/forsale",
-					"公司新闻"=> "/admin/compnews",
-					"行业新闻"=> "/admin/businews",
-					"衍生服务"=> "/admin/service",
-					"保养讲堂"=> "/admin/classroom",
+			"index"		=> array('轮播图管理'=>"/admin/switch"),
+			"newsman"	=> array(
+					"最新活动"=> "/newsman/activity",
+					"优惠促销"=> "/newsman/forsale",
+					"公司新闻"=> "/newsman/compnews",
+					"行业新闻"=> "/newsman/businews",
+					"衍生服务"=> "/newsman/service",
+					"保养讲堂"=> "/newsman/classroom",
 				),
-			"简介管理"	=> array(
+			"introman"	=> array(
 					"公司简介"=>'/adintro/company',
 					"品牌历史"=>'/adintro/history',
 					"销售团队"=>'/adintro/sales',
 					"联系我们"=>'/adintro/contact',
 					"加入我们"=>'/adintro/joinus'	
 				),		
+		),
+		'navname' => array(
+			"index"		=> "首页",
+			"newsman"	=> "新闻管理",
+			"introman"	=> "简介管理"
 		)
 	),
 );

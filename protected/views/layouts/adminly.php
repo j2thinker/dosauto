@@ -5,11 +5,10 @@
 	<title>管理系统后台</title>
 </head>
 <frameset rows="59,*" cols="*" frameborder="no" border="0" framespacing="0">
-  <frame src="<?php echo Yii::app()->request->baseUrl; ?>/admintpl/top.php" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
+  <frame src="<?php echo Yii::app()->request->baseUrl; ?>/index.php/admin/topnav" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
   <frameset cols="213,*" frameborder="no" border="0" framespacing="0">
-    <frame src="<?php echo Yii::app()->request->baseUrl; ?>/admintpl/left.php" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
-    <frame src="<?php echo Yii::app()->request->baseUrl; ?>/admintpl/mainfra.php" name="mainFrame" id="mainFrame" title="mainFrame" />
+    <frame src="<?php echo Yii::app()->request->baseUrl; ?>/index.php/admin/leftnav" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
+    <frame src="<?php echo Yii::app()->request->baseUrl; ?>/index.php/admin/rightnav" name="mainFrame" id="mainFrame" title="mainFrame" />
   </frameset>
 </frameset>
-
 </html>
