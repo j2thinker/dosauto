@@ -14,7 +14,7 @@ class AdminController extends Controller
 	 */
 	public function actionIndex(){
 		$this->layout = "adminly" ;
-		$this->render('adindex') ;
+		$this->render('index') ;
 	}
 	
 	/**
