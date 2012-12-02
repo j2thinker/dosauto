@@ -2,25 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>项目管理系统 by www.mianfeimoban.com</title>
-<link href="/css/admin/css.css" rel="stylesheet" type="text/css" />
+<title>后台管理 </title>
 <script type="text/javascript" src="/kindeditor/kindeditor-min.js"></script>
+<style type="text/css">
+#maincon{
+	width:100% ;
+	margin:0 auto ;
+	height:auto!important;
+    height:580px;
+    min-height:580px;
+	border:2px solid #EEEEEE ;
+}
+</style>
 </head>
 <body>
-	<textarea rows="20" cols="120" name="content"></textarea>
-	<script type="text/javascript">
-	var editor;
-	KindEditor.ready(function(K) {
-		editor = K.create('textarea[name="content"]', {
-			resizeType : 1,
-			allowPreviewEmoticons : false,
-			allowImageUpload : false,
-			items : [
-				'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
-				'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
-				'insertunorderedlist', '|', 'emoticons', 'image', 'link']
-		});
-	});
-	</script>
+	<div id="maincon">
+		<div class="nav"></div>
+		<div class="con">
+			
+		</div>
+		<div id="footer"></div>
+	</div>
 </body>
 </html>

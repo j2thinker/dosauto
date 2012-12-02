@@ -6,13 +6,9 @@
 <style type="text/css">
 <!--
 body {
-	margin-left: 0px;
-	margin-top: 1px;
-	margin-right: 0px;
-	margin-bottom: 0px;
+	margin:0px ;
 	background-color: #4AA3D8;
-}
-html { overflow-x: ; overflow-y: ; border:0;} 
+} 
 -->
 </style>
 </head>

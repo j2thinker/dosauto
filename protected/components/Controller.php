@@ -3,6 +3,7 @@
  * Controller is the customized base controller class.
  * All controller classes for this application should extend from this base class.
  */
+date_default_timezone_set ('Asia/Chongqing') ;
 class Controller extends CController
 {
 	/**
