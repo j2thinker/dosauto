@@ -10,10 +10,16 @@ class NewsmanController extends Controller{
 	}
 	
 	public function actionActivity() {
+		$this->layout = "adright" ;
 		$this->render('activity') ;
 	}
 	
 	public function actionForsale() {
 		$this->render('forsale') ;
+	}
+	
+	public function actionAddinfo(){
+		$this->layout = "adright" ;
+		$this->render('addinfo') ;
 	}
 }
