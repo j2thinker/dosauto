@@ -98,7 +98,6 @@ return array(
 					"保养讲堂"=> "/newsman/classroom?cid=6",
 				),
 			"introman"	=> array(
-<<<<<<< HEAD
 					"公司简介"=>'/adintro/company/1',
 					"品牌历史"=>'/adintro/company/2',
 					"销售团队"=>'/adintro/company/3',
@@ -106,17 +105,9 @@ return array(
 					"加入我们-职位分类"=>'/adintro/joinuscat',
 					"加入我们-职位详情"=>'/adintro/joinus',
 				),		
-=======
-					"公司简介"=>'/adintro/company',
-					"品牌历史"=>'/adintro/history',
-					"销售团队"=>'/adintro/sales',
-					"联系我们"=>'/adintro/contact',
-					"加入我们"=>'/adintro/joinus'	
-				),
 			"tuan" => array(
 					"团购管理"=>"/tuan/list"
 				),
->>>>>>> 97a0cbca24ce2b61a62b5ddc431660cb4fec2dcb
 		),
 
 		'navname' => array(

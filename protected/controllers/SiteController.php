@@ -126,4 +126,7 @@ class SiteController extends Controller
 		$data['content'] = $content;
 		$this->render('intro', $data);
 	}
+	public function actionJoinus(){
+		
+	}
 }
