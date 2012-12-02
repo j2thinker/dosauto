@@ -44,3 +44,26 @@ CREATE TABLE `auto_jobs_info`(
 `email` tinyint(1) not null default 0,
 `cat_id` int(10) not null default 0
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+#信息表，表名有auto_news 变更为 auto_info,表中字段略有变更
+CREATE TABLE `auto_info` (
+ `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+ `title` varchar(120) NOT NULL DEFAULT ' ' COMMENT '信息标题',
+ `pic_url` varchar(120) NOT NULL DEFAULT ' ' COMMENT '图片地址',
+ `descript` varchar(240) NOT NULL DEFAULT ' ' COMMENT '信息简述',
+ `content` text NOT NULL COMMENT '信息详情',
+ `ctime` int(11) NOT NULL COMMENT '信息创建时间',
+ `endtime` int(11) NOT NULL COMMENT '失效时间',
+ `category` int(11) NOT NULL DEFAULT '1' COMMENT '信息类别1.新闻，2.为活动，3.保养讲堂 4.衍生服务',
+ `priority` tinyint(4) NOT NULL DEFAULT '1' COMMENT '信息权重 权重越高越靠前',
+ `state` tinyint(4) NOT NULL DEFAULT '0' COMMENT '信息状态 默认0.正常 1.删除 ',
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8
+
+#团购表
+CREATE TABLE `auto_tuan` (
+ `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+ `pic_url` varchar(120) NOT NULL COMMENT '显示图片',
+ `link` varchar(120) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='团购表'
