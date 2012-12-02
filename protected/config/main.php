@@ -7,10 +7,10 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
-
+	'name'=>'汽车管理系统',
+	
 	// preloading 'log' component
-	'preload'=>array('log'),
+	//'preload'=>array('log'),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -86,5 +86,24 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+		//后台导航左侧模块
+		'adnav' => array(
+			"首页"		=> array('轮播图管理'=>"/admin/switch"),
+			"新闻管理"	=> array(
+					"最新活动" => "/admin/activity",
+					"优惠促销"=> "/admin/forsale",
+					"公司新闻"=> "/admin/compnews",
+					"行业新闻"=> "/admin/businews",
+					"衍生服务"=> "/admin/service",
+					"保养讲堂"=> "/admin/classroom",
+				),
+			"简介管理"	=> array(
+					"公司简介"=>'/adintro/company',
+					"品牌历史"=>'/adintro/history',
+					"销售团队"=>'/adintro/sales',
+					"联系我们"=>'/adintro/contact',
+					"加入我们"=>'/adintro/joinus'	
+				),		
+		)
 	),
 );
