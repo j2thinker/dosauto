@@ -14,7 +14,7 @@
 		<tr>
 			<td>内容</td>
 			<td  align="left">
-				<textarea rows="20" cols="100" name="content" id="content" value="<?php if($content) echo $content;?>"></textarea>
+				<textarea rows="20" cols="100" name="content" id="content" ><?php if($content) echo $content;?></textarea>
 			</td>
 		</tr>
 		<tr>
