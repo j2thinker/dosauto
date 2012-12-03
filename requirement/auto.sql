@@ -71,9 +71,3 @@ CREATE TABLE `auto_tuan` (
 
 
 
-
-
-
-
-
-
