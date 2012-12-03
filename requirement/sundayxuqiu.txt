@@ -1,0 +1,278 @@
+
+
+1.首页：
+顶导先走数组的方式，存配置文件。
+1)大的轮播图：
+
+2)图片存储：
+最新的图片，按页面进行选择频道。
+权重在文本框中的输入数字，默认为0不显示。
+
+3)车辆信息图：
+左右可以移动。
+数据库：汽车信息表：
+字段：
+图片URL
+
+
+4）新闻中心
+图片
+新闻标题
+文章内容简要
+
+5)优惠活动
+
+
+6)公司简介：
+按文章页存储
+
+2.公司介绍：
+
+以下存到新闻表中：
+1)公司简介
+2）品牌历史
+3)销售团队
+4)联系我们
+走简介表的方式
+
+
+5)加入我们--->这个需要单独处理
+表A：分类表
+  id 分类名称 类型(type，为将来作导航使用用)
+表B:职位详细表
+职位名称 ,职位简介信息，日期，hr邮箱,所在分类，
+
+
+3.新闻中心
+文章默认以时间进行排列显示，如果权重存在，以权重为主，时间为其次。
+
+1）最新活动，优惠促销，公司新闻，行业新闻
+都走文章的方式开发，即新闻表的方式。
+新闻表的特点：一张图片，一个标题，简述
+
+
+2)衍生服务
+1。新闻表存
+每个小段都相当于一个新闻。
+2。衍生服务的分类。
+
+
+3)团购消息：
+图片地址，链接，状态（是否下线）
+
+4)“保养讲堂”的实现跟“衍生服务”一样。
+-------------------
+4.二手车服务
+单独走一张表存二手车信息
+1)二手车源：
+车型/车系：奥迪 Q7 10款 3.0 TDI领先型
+发动机：V型6缸
+变速箱：手自一体
+排量(毫升)：3.0T
+外部颜色：白色
+行驶里程(km)：20000
+上牌日期：2010-10-01
+价格(RMB)：1130000
+发布日期：2012/2/23 0:00:00
+发布单位：奥迪北京店
+联系电话：59659826
+车辆简介：
+车辆图片1
+车辆图片3
+车辆图片2
+车辆图片4
+通过更改大小来得到缩略图
+状态（过期等）
+是否为精品
+
+2）二手车置换
+一张表存取所有的信息：
+发布置换车辆,拟置换的新车,用户等。
+
+3)汽车精品:
+同二手车源处理方式一样。
+
+-------------------
+5.售后服务
+1)预约试驾:走预订信息的方式
+
+2)保养预估：走简介表的方式
+
+
+----------------------------
+6.购车指南：
+
+1)衍生产品
+走文章页
+
+2)新车预订:
+a)汽车图片，汽车品牌(从汽车信息库取数据，数据同首页的数据源一样)
+b)预订信息：
+姓名，电话，购车时间，
+
+数据库表结构：
+姓名，电话，购车时间，录入时间,先择车型，后台是否处理过,类型（表示是新车预订还是预约试驾）
+
+3)车贷计算器
+js计算车贷（算法需要对方提供）
+
+-------------------------------
+7.俱乐部：
+1。车主关怀
+走简介表的方式
+文章内容的走异步调用的方式显示
+
+
+2）车友活动：
+走新闻表的方式
+类型:活动，新闻，是否过期
+
+
+3）往期活动回顾
+
+----------------------------------
+8.搜索功能：
+搜索新闻表中的模糊。
+
+--------------------------------
+9.汽车展厅：
+
+
+------------------------------------DB表语构------------------------------
+
+1.简介表
+auto_introduce
+标题 简介内容(支持文字和图片) 发表日期 状态(删除) 类型(车主关怀/)
+title varchar(120)
+content text
+ctime int
+state tinyint 0为正常，1为删除。默认为0
+intro_type  tinyint 公司简介 品牌历史	销售团队	联系我们 车主关怀 衍生产品 保养预估
+-----------------
+2新闻表：
+auto_news
+标题 图片 简述 正文 发表日期  结束日期 状态（目前有删除） 类型(目前有新闻，活动,衍生服务)   权重（默认为1,数字越大表示优先级越高）
+title varchar(120)
+news_pic varchar(120) 
+desc  varchar(240)
+content text
+ctime  int 
+endtime int
+state tinyint 0为正常，1为删除。默认为0
+news_type tinyint 默认为0.0为新闻，1为活动，2为保养讲堂 3衍生服务？ 这个分类名称是否如静态一样显示的？？？
+weight tinyint 
+
+-----------------
+3.首页焦点图
+
+1)图片表：focus_pic
+图片ID  pid 
+图片地址 pic_src varchar(120)	
+链接地址 pic_link varchar(120)
+
+2)页面焦点图表：page_focus_pic
+页面 page_id int
+图片ID pid_list varchar(200)
+
+
+-----------------
+4.加入我们：
+
+1)auto_jobs_cate：分类表
+id  id int(11) auto_increment not null
+分类名称  cate_name varchar(120)
+类型(type，为将来作导航使用)  cate tinyint 
+
+2)auto_jobs_info:职位详细表
+职位名称 jobs_name varchar(120)
+职位简介信息 jobs_info text
+日期 ctime int
+hr邮箱 email varchar(30)
+所在分类id. cate_id int 
+
+--------------
+5.二手车置换数据表：
+auto_secondhand_change
+车辆型号 ,cate   varchar(120)
+发动机排量 , motor_output   varchar(120)
+变速箱类型 ,gearbox varchar(120) not null default '';
+行驶里程 roadhaul  int(11)
+
+发动机类型 motor_cate varchar(120)
+外部颜色 color varchar(120)
+
+询问店名 ask_shop_name varchar(120)
+上牌时间  plate_number_time int int
+发布置换车辆详细说明 old_info text
+
+拟置换的新车详细说明 new_info text
+姓名 name varchar not null
+性别 sex tinyint
+联系电话tel   int   not null
+联系地址 contrat_address  varchar(120)
+email email varchar(30)
+
+
+--------------------
+6.二手车源及汽车精品数据表：
+auto_secondhand_info
+标题	title varchar(120)
+车型/车系：奥迪 Q7 10款 3.0 TDI领先型  cate varchar(120)
+发动机：V型6缸	motor   varchar(120)  not null default '';
+变速箱：手自一体  gearbox varchar(120) not null default '';
+排量(毫升)：3.0T   output varchar(120)
+外部颜色：白色     color varchar(120)
+行驶里程(km)：20000 roadhaul  int(11)
+上牌日期：2010-10-01 plate_number_time int
+价格(RMB)：1130000   price	int
+发布日期：2012/2/23 0:00:00 pubtime  int
+发布单位：奥迪北京店 pubcomp varchar(30)
+联系电话：59659826   contract_tel int
+车辆简介： auto_info  text
+车辆图片1  pic_one	varcahr(120)
+车辆图片3  pic_two  varcahr(120)
+车辆图片2  pic_three varcahr(120)
+车辆图片4  pic_four   varcahr(120)
+通过更改大小来得到缩略图
+状态（过期等）state   tinyint
+是否为精品 is_best    tinyint 0为默认值，1为精品 not null default 0;
+
+-----------------------------------
+7.新车预订表：
+auto_plan_buy
+预订信息表：
+姓名，电话，购车时间，预订车辆名称，分类（试驾还是预订）,录入时间,后台是否处理过
+name varchar not null
+tel   int   not null
+buy_time int  not null default 0;
+auto_id int  not null
+cate (1为试驾，2为预订) tinyint
+ctime int
+state tinyint (0为未处理,1为处理完的)
+
+
+
+8.团购表：
+auto_tuan
+id int
+pic varchar(120)
+link varchar(120)
+
+
+
+
+9.车辆信息表
+
+
+
+
+
+===========================星期六 2012年12月1日===============================================
+分工：
+hj：简介info表+ 加入我们 +备份
+zf:新闻new表+团购+汽车计算器
+pf:二手车+焦点图+在线客服
+
+
+
+
