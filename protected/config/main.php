@@ -131,6 +131,7 @@ return array(
 			4	=> '优惠促销' ,
 			5	=> '衍生服务' ,
 			6	=> '保养讲堂'
-		)
+		),
+		"frontnav"=>include(dirname(__FILE__) ."/menu.php")
 	),
 );
