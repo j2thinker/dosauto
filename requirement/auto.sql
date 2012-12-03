@@ -42,7 +42,7 @@ CREATE TABLE `auto_jobs_info`(
 `jobs_name` varchar(120) not null default '',
 `jobs_info` text not null default '',
 `ctime` int(11) not null default 0,
-`email` tinyint(1) not null default 0,
+`email` varchar(30) not null default '',
 `cat_id` int(10) not null default 0
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -71,3 +71,80 @@ CREATE TABLE `auto_tuan` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='团购表';
 
 
+#首页焦点图中图片表：
+CREATE TABLE `focus_pic` (
+  `pid` int(11) NOT NULL auto_increment COMMENT '图片ID',
+  `pic_src` varchar(120) NOT NULL default '' COMMENT '图片地址',
+  `pic_link` varchar(120) NOT NULL default '' COMMENT '链接地址',
+  PRIMARY KEY  (`pid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;      
+
+#首页焦点图中页面焦点图表
+CREATE TABLE `page_focus_pic` (
+  `id` int(11) NOT NULL auto_increment COMMENT '主键',
+  `page_id` int(11) NOT NULL default 0 COMMENT '页面ID',
+  `pid_list` varchar(200) NOT NULL default '' COMMENT '图片ID列表',
+  PRIMARY KEY  (`id`),
+  KEY `page_id` (`page_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+#二手车置换数据表：
+ CREATE TABLE `auto_secondhand_change` (
+  `id` int(11) NOT NULL auto_increment COMMENT '主键',
+  `cat` varchar(120) NOT NULL default '' COMMENT '车辆型号',
+  `motor_output` varchar(120) NOT NULL default '' COMMENT '发动机排量',
+  `gearbox` varchar(120) NOT NULL default '' COMMENT '变速箱类型',
+  `roadhaul` int(11) NOT NULL default 0 COMMENT '行驶里程',
+  `motor_cate` varchar(120) NOT NULL default '' COMMENT '发动机类型',
+  `color` varchar(120) NOT NULL default '' COMMENT '外部颜色',
+  `ask_shop_name` varchar(120) NOT NULL default '' COMMENT '询问店名',
+  `plate_number_time` int(11) NOT NULL default 0 COMMENT '上牌时间',
+  `old_info` text NOT NULL default '' COMMENT '发布置换车辆详细说明',
+  `new_info` text NOT NULL default '' COMMENT '拟置换的新车详细说明',
+  `name` varchar(120) NOT NULL default '' COMMENT '姓名',
+  `sex` tinyint(1) unsigned NOT NULL default 0 COMMENT '性别',
+  `tel` int(11) NOT NULL default 0 COMMENT '联系电话',
+  `contact_addr` varchar(120) default '' COMMENT '联系地址',
+  `email` varchar(30) default '' COMMENT 'email地址',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+#二手车源及汽车精品数据表：
+CREATE TABLE `auto_secondhand_info` (
+  `id` int(11) NOT NULL auto_increment COMMENT '主键',
+  `title` varchar(120) NOT NULL default '' COMMENT '标题',
+  `cate` varchar(120) NOT NULL default '' COMMENT '车型/车系',
+  `motor` varchar(120) NOT NULL default '' COMMENT '发动机',
+  `gearbox` varchar(120) NOT NULL default '' COMMENT '变速箱',
+  `outpub` varchar(120) NOT NULL default '' COMMENT '排量',
+  `color` varchar(120) NOT NULL default '' COMMENT '外部颜色',
+  `roadhaul` int(11) NOT NULL default '0' COMMENT '行驶里程',
+  `plate_number_time` int(11) NOT NULL default '0' COMMENT '上牌日期',
+  `price` int(11) NOT NULL default '0' COMMENT '价格',
+  `pubtime` int(11) NOT NULL default '0' COMMENT '发布日期',
+  `pubcomp` varchar(50) NOT NULL default '' COMMENT '发布单位',
+  `contract_tel` int(11) NOT NULL default '0' COMMENT '联系电话',
+  `auto_info` text NOT NULL COMMENT '车辆简介',
+  `pic_one` varchar(120) NOT NULL default '' COMMENT '车辆图片1',
+  `pic_two` varchar(120) NOT NULL default '' COMMENT '车辆图片2',
+  `pic_three` varchar(120) NOT NULL default '' COMMENT '车辆图片3',
+  `pic_four` varchar(120) NOT NULL default '' COMMENT '车辆图片4',
+  `state` tinyint(4) NOT NULL default '0' COMMENT '状态（过期等）',
+  `is_best` tinyint(1) NOT NULL default '0' COMMENT '0为默认值，1为精品',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+#新车预订表
+CREATE TABLE `auto_plan_buy` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(120) NOT NULL default '' COMMENT '姓名',
+  `tel` int(11) NOT NULL default '0' COMMENT '电话',
+  `buy_time` int(11) NOT NULL default '0' COMMENT '购车时间',
+  `atuo_id` int(11) NOT NULL default '0',
+  `cat` tinyint(1) NOT NULL default '0',
+  `ctime` int(11) NOT NULL default '0',
+  `stae` tinyint(1) NOT NULL default '0' COMMENT '0为未处理状态,1为处理完的',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
