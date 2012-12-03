@@ -27,11 +27,19 @@ class NewsmanController extends Controller{
 	 * Edit information 
 	 */
 	public function actionEditinfo(){
-		//get data from db
-		//$data['infodetail'] = '' ;
+		$info_id = Yii::app()->request->getParam('id') ;
+		$info_obj = new Info();
+		$data['infodetail'] = $info_obj->findByPk($info_id) ;
 		$this->render('infoedit' , $data) ;
 	}
 	
+	public function actionAddact(){
+		
+	}
+	
+	public function actionEditact(){
+		
+	}
 	/**
 	 * list information reference to Activity action
 	 * Enter description here ...
