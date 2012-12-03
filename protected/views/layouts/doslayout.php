@@ -74,11 +74,11 @@
 			</li>
 			<li><a href="#">公司介绍</a>
 				<UL>
-				<LI><A href="/site/intro/1">公司简介</A></LI>
-				<LI><A href="/site/intro/2">品牌历史</A></LI>
-				<LI><A href="/site/intro/3">销售团队</A></LI>
-				<li><a href="/site/intro/4">联系我们</a></li>
-				<li><a href="/site/intro/5">加入我们</a></li>
+				<LI><A href="/index.php/site/intro/1">公司简介</A></LI>
+				<LI><A href="/index.php/site/intro/2">品牌历史</A></LI>
+				<LI><A href="/index.php/site/intro/3">销售团队</A></LI>
+				<li><a href="/index.php/site/intro/4">联系我们</a></li>
+				<li><a href="/index.php/site/intro/5">加入我们</a></li>
 				</UL>
 			</li>
 			<li><a href="index.html">首　页</a></li>
