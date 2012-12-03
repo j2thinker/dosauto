@@ -8,11 +8,15 @@
 		<tr>
 			<td width="10%">分类</td>
 			<td width="90%" align="left">
-				<input type="text" name="cat_id" size="90" value="<?php if($cat_id) echo $cat_id;?>" />
+				<select name="cat_id">
+				<?php foreach ($cat_list as $v):?>
+				<option value="<?php echo $v['id'];?>" <?php if($cat_id==$v['id']):?>selected="selected"<?php endif;?>><?php echo $v['cate_name'];?></option>
+				<?php endforeach;?>
+				</select>
 			</td>
 		</tr>
 		<tr>
-			<td width="10%">分类名</td>
+			<td width="10%">职位名称</td>
 			<td width="90%" align="left">
 				<input type="text" name="jobs_name" size="90" value="<?php if($jobs_name) echo $jobs_name;?>" />
 			</td>
@@ -20,7 +24,7 @@
 		<tr>
 			<td>内容</td>
 			<td  align="left">
-				<textarea rows="20" cols="100" name="jobs_info" id="content" value="<?php if($jobs_info) echo $jobs_info;?>"></textarea>
+				<textarea rows="20" cols="100" name="jobs_info" id="content"><?php if($jobs_info) echo $jobs_info;?></textarea>
 			</td>
 		</tr>
 		<tr>
