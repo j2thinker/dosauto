@@ -59,7 +59,7 @@ CREATE TABLE `auto_info` (
  `priority` tinyint(4) NOT NULL DEFAULT '1' COMMENT '信息权重 权重越高越靠前',
  `state` tinyint(4) NOT NULL DEFAULT '0' COMMENT '信息状态 默认0.正常 1.删除 ',
  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 #团购表
 CREATE TABLE `auto_tuan` (
@@ -67,4 +67,4 @@ CREATE TABLE `auto_tuan` (
  `pic_url` varchar(120) NOT NULL COMMENT '显示图片',
  `link` varchar(120) NOT NULL,
  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='团购表'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='团购表';
