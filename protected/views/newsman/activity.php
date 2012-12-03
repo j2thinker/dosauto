@@ -13,12 +13,34 @@
 			<td width="8%">权重</td>
 			<td width="12%">操作</td>
 		</tr>
+		<?php if(!empty($reclist)) :?>
+		<?php foreach ($reclist as $key => $val):?>
 		<tr>
-			<td>编号</td>
-			<td>标题</td>
-			<td>发表时间</td>
-			<td>1</td>
-			<td>编辑　删除</td>
+			<td><?php echo $val['id'] ;?></td>
+			<td><?php echo $val['title'] ;?></td>
+			<td><?php echo date("Y-m-d H:i:s" ,$val['ctime']) ;?></td>
+			<td><?php echo $val['priority'] ;?></td>
+			<td><a href="/index.php/newsman/editinfo?id=<?php echo $val['id'] ;?>">编辑</a>　<a href="javascript:;" rid="<?php echo $val['id'] ;?>" class="drec">删除</a></td>
 		</tr>
+		<?php endforeach;?>
+		<?php else :?>
+		<tr>
+			<td colspan="5">未发现符合条件的记录</td>
+		</tr>
+		<?php endif ;?>
 	</table>
 </div>
+<div id="pager">    
+    <?php    
+    $this->widget('CLinkPager',array(    
+        'header'=>'',    
+        'firstPageLabel' => '首页',    
+        'lastPageLabel' => '末页',    
+        'prevPageLabel' => '上一页',    
+        'nextPageLabel' => '下一页',    
+        'pages' => $pages,    
+        'maxButtonCount'=>13    
+        )    
+    );    
+    ?>    
+</div>  

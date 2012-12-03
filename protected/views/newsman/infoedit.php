@@ -3,23 +3,23 @@
 	<div style="width:90%;float:left;font-size:14px ;">&nbsp;&nbsp;&nbsp;&nbsp;<b>编辑信息</b></div>
 </div>
 <div class="con">
-	<form method="post" action="">
+	<form method="post" action="/index.php/newsman/editact" enctype="multipart/form-data">
 	<table border="1" width="98%" style="margin-top:20px ;" cellpadding=10 cellspacing=0>
 		<tr>
 			<td width="10%">标题</td>
 			<td width="90%" align="left">
-				<input type="hidden" name="id" value="<?php echo $infodetail['id']?>"> ;
+				<input type="hidden" name="id" value="<?php echo $infodetail['id']?>">
 				<input type="text" name="title" size="90" value="<?php echo $infodetail['title'] ;?>" />
 			</td>
 		</tr>
 		<tr>
-			<td><?php echo $cname ;?>简述</td>
+			<td>信息简述</td>
 			<td  align="left">
-				<textarea rows="5" cols="80" name=""><?php echo $infodetail['descript']?></textarea>
+				<textarea rows="5" cols="80" name="descript"><?php echo $infodetail['descript']?></textarea>
 			</td>
 		</tr>
 		<tr>
-			<td><?php echo $cname ;?>图片</td>
+			<td>图片</td>
 			<td  align="left">
 				<input type="file" name="pic_url" />
 			</td>
