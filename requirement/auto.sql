@@ -67,4 +67,7 @@ CREATE TABLE `auto_tuan` (
  `pic_url` varchar(120) NOT NULL COMMENT '显示图片',
  `link` varchar(120) NOT NULL,
  PRIMARY KEY (`id`)
+
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='团购表';
+
+

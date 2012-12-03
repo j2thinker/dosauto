@@ -32,4 +32,12 @@ class IntroduceForm extends CFormModel{
 		
 		return $list;
 	}
+	public function delete(){
+		$connection = Yii::app()->db;
+		$sql = "delete from `auto_introduce` where `id`=:id";
+		$command=$connection->createCommand($sql);
+		$command->bindValues(array(":id"=>$this->id));
+		$list = $command->execute();
+		return $list;
+	}
 }

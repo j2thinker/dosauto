@@ -54,12 +54,19 @@ return array(
 		*/
 		// uncomment the following to use a MySQL database
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=dosauto',
+			'connectionString' => 'mysql:host=10.210.213.74;dbname=dosauto',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
 		),
+		/* 'db'=>array(
+				'connectionString' => 'mysql:host=10.210.213.74;port=3306;dbname=test',
+				'emulatePrepare' => true,
+				'username' => 'root',
+				'password' => '123456',
+				'charset' => 'utf8',
+		), */
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
