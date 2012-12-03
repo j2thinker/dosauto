@@ -23,16 +23,9 @@ class AdintroController extends Controller{
 	}
 	public function actionAdd() {
 		$this->layout = "adright" ;
-		$edit_type = $_GET['edit_type'];
-		$id = 0;
-		$intro_type = 1;
-		if (isset($_GET['id'])  && $_GET['id']){
-			$id = $_GET['id'];
-		}
-		if (isset($_GET['intro_type']) && $_GET['intro_type']){
-			$intro_type = $_GET['intro_type'];
-		}
-		
+		$edit_type = yii::app()->request->getParam("edit_type", 0);
+		$id = yii::app()->request->getParam("id", 0);
+		$intro_type = yii::app()->request->getParam("intro_type", 1);
 		$title = $content = "";
 		if($edit_type == 1 && $id){
 			$model = new IntroduceForm();
@@ -52,35 +45,30 @@ class AdintroController extends Controller{
 		$this->render('add', $data);
 	}
 	public function actionAddsave(){
-		$id = $_POST['id'];
-		$title = $_POST['title'];
-		$type = $_POST['intro_type'];
-		$content = $_POST['content'];
+		$id = yii::app()->request->getPost("id", 0);
+		$title = yii::app()->request->getPost("title", "");
+		$intro_type = yii::app()->request->getPost("intro_type", "");
+		$content = yii::app()->request->getPost("content", "");
 		$model = new IntroduceForm();
 		$model->id = $id;
 		$model->title = $title;
 		$model->content = $content;
 		$model->ctime = time();
 		$model->state = 1;
-		$model->intro_type = $type;
+		$model->intro_type = $intro_type;
 		$re = $model->save();
 		$this->layout = "adright" ;
-		$_REQUEST['id'] = $type;
+		$_REQUEST['id'] = $intro_type;
 		$this->actionCompany();
 	}
 	public function actionDelete(){
-		$title = $_POST['title'];
-		$type = $_POST['intro_type'];
-		$content = $_POST['content'];
+		$id = yii::app()->request->getParam("id", 0);
+		$intro_type = yii::app()->request->getParam("intro_type", 0);
 		$model = new IntroduceForm();
-		$model->title = $title;
-		$model->content = $content;
-		$model->ctime = time();
-		$model->state = 1;
-		$model->intro_type = $type;
-		$re = $model->save();
+		$model->id = $id;
+		$re = $model->delete();
 		$this->layout = "adright" ;
-		$_REQUEST['id'] = $type;
+		$_REQUEST['id'] = $intro_type;
 		$this->actionCompany();
 	}
 	
@@ -95,16 +83,10 @@ class AdintroController extends Controller{
 	}
 	public function actionJoinuscatadd() {
 		$this->layout = "adright" ;
-		$edit_type = 0;
-		if (isset($_GET['edit_type'])){
-			$edit_type = $_GET['edit_type'];
-		}
-		$id = 0;
-		$intro_type = 1;
+		$edit_type = yii::app()->request->getParam("edit_type", 0);
 		$cate_name = "";
-		if (isset($_GET['id'])  && $_GET['id']){
-			$id = $_GET['id'];
-		}
+		$id = yii::app()->request->getParam("id", 0);
+		
 		if($edit_type == 1 && $id){
 			$model = new JobscateForm();
 			$model->id = $id;
@@ -119,9 +101,8 @@ class AdintroController extends Controller{
 		$this->render('joinuscatadd', $data);
 	}
 	public function actionJoinuscataddsave(){
-		$id = $_POST['id'];
-		$cate_name = "";
-		$cate_name = $_POST['cate_name'];
+		$id = yii::app()->request->getPost("id", 0);
+		$cate_name = yii::app()->request->getPost("cate_name", "");
 		$model = new JobscateForm();
 		$model->id = $id;
 		$model->cate_name = $cate_name;
@@ -131,7 +112,7 @@ class AdintroController extends Controller{
 		$this->actionJoinuscat();
 	}
 	public function actionJoinuscatdelete(){
-		$id = $_GET['id'];
+		$id = yii::app()->request->getParam("id", 0);
 		$model = new JobscateForm();
 		$model->id = $id;
 		$re = $model->delete();
@@ -151,16 +132,11 @@ class AdintroController extends Controller{
 	}
 	public function actionJoinusadd() {
 		$this->layout = "adright" ;
-		$edit_type = 0;
-		if (isset($_GET['edit_type'])){
-			$edit_type = $_GET['edit_type'];
-		}
+		$edit_type = yii::app()->request->getParam("edit_type", 0);
+		$id = yii::app()->request->getParam("id", 0);
 		$cat_id = $id = 0;
 		$intro_type = 1;
 		$jobs_name = $jobs_info = $email = "";
-		if (isset($_GET['id'])  && $_GET['id']){
-			$id = $_GET['id'];
-		}
 		if($edit_type == 1 && $id){
 			$model = new JobsForm();
 			$model->id = $id;
@@ -180,11 +156,12 @@ class AdintroController extends Controller{
 		$this->render('joinusadd', $data);
 	}
 	public function actionJoinusaddsave(){
-		$id = $_POST['id'];
-		$jobs_name = $_POST['jobs_name'];
-		$jobs_info = $_POST['jobs_info'];
-		$email = $_POST['email'];
-		$cat_id = $_POST['cat_id'];
+		$id = yii::app()->request->getPost("id", 0);
+		$jobs_name = yii::app()->request->getPost("jobs_name", "");
+		$jobs_info = yii::app()->request->getPost("jobs_info", "");
+		$email = yii::app()->request->getPost("email", "");
+		$cat_id = yii::app()->request->getPost("cat_id", 1);
+		
 		$model = new JobsForm();
 		$model->id = $id;
 		$model->jobs_name = $jobs_name;
@@ -195,14 +172,15 @@ class AdintroController extends Controller{
 		$re = $model->save();
 		$this->layout = "adright" ;
 		$_REQUEST['id'] = $id;
-		$this->actionJoinuscat();
+		$this->actionJoinus();
 	}
+	
 	public function actionJoinusdelete(){
-		$id = $_GET['id'];
+		$id = yii::app()->request->getParam("id", 0);
 		$model = new JobsForm();
 		$model->id = $id;
 		$re = $model->delete();
 		$this->layout = "adright" ;
-		$this->actionJoinuscat();
+		$this->actionJoinus();
 	}
 }

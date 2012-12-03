@@ -1,7 +1,7 @@
 <div class="nav">
 	<div style="width:90%;float:left;font-size:14px ;">&nbsp;&nbsp;&nbsp;&nbsp;<b><?php echo $company_title;?></b></div>
 	<div style="width:9%;float:left;font-size:14px ;" >
-		<a href="/index.php/adintro/add?intro_type=<?php echo $intro_type?>" target="_self">添加<?php echo $company_title;?></a>
+		<a href="/index.php/adintro/add?intro_type=<?php echo $intro_type;?>" target="_self">添加<?php echo $company_title;?></a>
 	</div>
 </div>
 
@@ -21,7 +21,7 @@
 			<td><?php echo $v['content']?></td>
 			<td>
 			<a href="/index.php/adintro/add?edit_type=1&id=<?php echo $v['id']?>" target="_self">编辑</a>
-			<a href="/index.php/adintro/del?id=<?php echo $v['id']?>" target="_self">删除</a>
+			<a href="/index.php/adintro/del?id=<?php echo $v['id']?>&intro_type=<?php  echo $intro_type;?>" target="_self">删除</a>
 			</td>
 		</tr>
 		<?php endforeach;?>
