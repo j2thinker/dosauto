@@ -34,7 +34,6 @@
 					<?php endforeach; ?>
 				</UL>
 			</li>
-
 			<?php else :?>
 				<li><a href="/index.php<?php echo $subs ;?>"><?php echo $contxt ;?></a></li>
 			<?php endif ;?>
