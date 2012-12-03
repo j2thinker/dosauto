@@ -69,5 +69,3 @@ CREATE TABLE `auto_tuan` (
  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='团购表';
 
-
-
