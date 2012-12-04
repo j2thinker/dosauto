@@ -14,22 +14,19 @@ class InformController extends Controller{
 	}
 	
 	public function actionDetail(){
-		$this->render('detail');
-		Yii::app()->end() ;
 		$nid = Yii::app()->request->getParam('nid') ;
 		$ninfo = Info::model()->findByPk($nid) ;
 		$this->render('detail' , array('ninfo'=>$ninfo)) ;
 	}
 	
 	private function renderTemplate($type){
-		$this->render('reclist');
-		Yii::app()->end() ;
 		$page = Yii::app()->request->getParam('page' , 1) ;
 		$pagesize = Yii::app()->request->getParam('pagesize' , 6) ;
 		$criteria = new CDbCriteria() ;
 		$criteria->addCondition("category={$type}") ;
 		$criteria->addCondition("state=1" , 'AND') ;
 		$criteria->order ="priority desc ,ctime desc" ;
+		
 		$count = Info::model()->count($criteria);
 		$reclist = array();
 		if($count>0){
@@ -52,7 +49,7 @@ class InformController extends Controller{
 		$this->renderTemplate(4) ; 
 	}
 	
-	public function actionNews(){
+	public function actionCompNews(){
 		$this->renderTemplate(1) ; 
 	}
 	

@@ -5,7 +5,7 @@
 <div class="you">
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><img src="/images/fd_kf1.jpg" onmouseover="this.src='tupian/fd_kf2.jpg'" onmouseout="this.src='tupian/fd_kf1.jpg'"/></td>
+    <td><img src="/images/fd_kf1.jpg" onmouseover="this.src='/images/fd_kf2.jpg'" onmouseout="this.src='/images/fd_kf1.jpg'"/></td>
     <td>&nbsp;</td>
     <td><a href="gc_jisuanqi.html"><img src="/images/fd_jsq1.jpg" onmouseover="this.src='/images/fd_jsq2.jpg'" onmouseout="this.src='/images/fd_jsq1.jpg'"/></a></td>
     <td>&nbsp;</td>
@@ -20,13 +20,17 @@
 
 <div class="gs_lbk hei_12">
 <ul>
-<li class="dqli">最新活动</li>
-<li><a href="xw_cuxiao.html">优惠促销</a></li>
-<li><a href="xw_gongsi.html">公司新闻</a></li>
-<li><a href="xw_hangye.html">行业新闻</a></li>
-<li><a href="xw_fuwu.html">衍生服务</a></li>
-<li><a href="xw_tuangou.html">团购消息</a></li>
-<li class="hli"><a href="xw_baoyang.html">保养讲堂</a></li>
+<?php $cact =  $this->getAction()->getId();$licss='';?>
+<?php foreach (Yii::app()->params['frontnav']["新闻中心"] as $stitle => $sact) :?>
+	<?php if($cact == 'classroom'):?>
+		<?php $licss = "hli"?>
+	<?php endif;?>
+	<?php if(strpos($sact ,$cact) === false):?>
+	<li class="<?php echo $licss ;?>"><a href="/index.php<?php echo $sact ;?>"><?php echo $stitle ;?></a></li>
+	<?php else :?>
+	<li class="dqli <?php echo $licss;?>"><?php echo $stitle ;?></li>
+	<?php endif;?>
+<?php endforeach ;?>
 </ul>
 </div>
 
