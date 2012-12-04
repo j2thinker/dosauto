@@ -21,11 +21,13 @@
 		<?php if($v):?>
 		<tr>
 			<td><?php echo $v['id']?></td>
-			<td><?php echo $v['cat_id']?></td>
+			<td>
+			<?php echo $cat_list[$v['cat_id']]['cate_name'];?>
+			</td>
 			<td><?php echo $v['jobs_name']?></td>
 			<td><?php echo $v['jobs_info']?></td>
 			<td><?php echo $v['email']?></td>
-			<td><?php echo $v['ctime']?></td>
+			<td><?php echo date('Y-m-d H:i:s', $v['ctime']);?></td>
 			<td>
 			<a href="/index.php/adintro/joinusadd?edit_type=1&id=<?php echo $v['id']?>" target="_self">编辑</a>
 			<a href="/index.php/adintro/joinusdelete?id=<?php echo $v['id']?>" target="_self">删除</a>

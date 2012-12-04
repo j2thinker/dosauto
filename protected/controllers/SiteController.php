@@ -122,11 +122,27 @@ class SiteController extends Controller
 		if($info && isset($info[0]) && isset($info[0]['content'])){
 			$content = $info[0]['content'];
 		}
+		$list = array(1=>'公司简介',2=>'品牌历史',3=>'销售团队',4=>'联系我们');
+		$data['navigation'] = $list[$intro_type];
 		$data['id'] = $intro_type;
 		$data['content'] = $content;
 		$this->render('intro', $data);
 	}
+	
 	public function actionJoinus(){
-		
+		$data = array();
+		#获取分类列表
+		$model = new JobscateForm();
+		$cat_list = $model->get_list();
+		$data['cat_list'] = $cat_list;
+		$first_cid = $cat_list[0]['id'];
+		$cat_id = yii::app()->request->getParam("cat_id", $first_cid);
+		$data['cat_id'] = $cat_id;
+		#根据分类id获取职位列表
+		$model = new JobsForm();
+		$model->cat_id = $cat_id;
+		$job_list = $model->get_list_by_cid();
+		$data['jobs_list'] = $job_list;
+		$this->render('joinus', $data);
 	}
 }

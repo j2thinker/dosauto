@@ -128,13 +128,19 @@ class AdintroController extends Controller{
 		$model = new JobsForm();
 		$list = $model->get_list();
 		$data['list'] = $list;
+		$model = new JobscateForm();
+		$cat_list = $model->get_list();
+		foreach ($cat_list as $v){
+			$tmp[$v['id']] = $v;
+		}
+		$data['cat_list'] = $tmp;
 		$this->render('joinus', $data);
 	}
 	public function actionJoinusadd() {
 		$this->layout = "adright" ;
 		$edit_type = yii::app()->request->getParam("edit_type", 0);
 		$id = yii::app()->request->getParam("id", 0);
-		$cat_id = $id = 0;
+		$cat_id = 0;
 		$intro_type = 1;
 		$jobs_name = $jobs_info = $email = "";
 		if($edit_type == 1 && $id){
@@ -143,11 +149,15 @@ class AdintroController extends Controller{
 			$info = $model->get_list_by_id();
 			if ($info){
 				$id = $info['id'];
+				$cat_id = $info['cat_id'];
 				$jobs_name = $info['jobs_name'];
 				$jobs_info = $info['jobs_info'];
 				$email = $info['email'];
 			}
 		}
+		$model = new JobscateForm();
+		$cat_list = $model->get_list();
+		$data['cat_list'] = $cat_list;
 		$data['id'] = $id;
 		$data['cat_id'] = $cat_id;
 		$data['jobs_name'] = $jobs_name;

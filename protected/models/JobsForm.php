@@ -21,6 +21,14 @@ class JobsForm extends CFormModel{
 		$list = $command->queryAll(); 
 		return $list;
 	}
+	public function get_list_by_cid(){
+		$connection = Yii::app()->db;
+		$sql = "select * from `auto_jobs_info` where `cat_id`=:cat_id";
+		$command=$connection->createCommand($sql);
+		$command->bindValues(array(":cat_id"=>$this->cat_id));
+		$list = $command->queryAll(); 
+		return $list;
+	}
 	public function get_list_by_id(){
 		$connection = Yii::app()->db;
 		$sql = "select * from `auto_jobs_info` where `id`=:id";

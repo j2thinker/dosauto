@@ -2,11 +2,11 @@
 return array(
 	"首页" => "/site/index" ,
 	"公司介绍" =>array(
-			"公司简介" => "",
-			"品牌历史" => "",
-			"销售团队" => "",
-			"联系我们" => "",
-			"加入我们" => ""
+			"公司简介" => "/site/intro/1",
+			"品牌历史" => "/site/intro/2",
+			"销售团队" => "/site/intro/3",
+			"联系我们" => "/site/intro/4",
+			"加入我们" => "/site/joinus"
 	),
 	"新闻中心" =>array(
 			"最新活动" => "/inform/activity",
