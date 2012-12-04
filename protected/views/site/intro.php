@@ -22,31 +22,31 @@
 <?php if($id == 1):?>
 <li class="dqli">公司简介</li>
 <?php else:?>
-<li><a href="/site/intro/1">公司简介</a></li>
+<li><a href="/index.php/site/intro/1">公司简介</a></li>
 <?php endif;?>
 
 <?php if($id == 2):?>
 <li class="dqli">品牌历史</li>
 <?php else:?>
-<li><a href="/site/intro/2">品牌历史</a></li>
+<li><a href="/index.php/site/intro/2">品牌历史</a></li>
 <?php endif;?>
 
 <?php if($id == 3):?>
 <li class="dqli">销售团队</li>
 <?php else:?>
-<li><a href="/site/intro/3">销售团队</a></li>
+<li><a href="/index.php/site/intro/3">销售团队</a></li>
 <?php endif;?>
 
 <?php if($id == 4):?>
 <li class="dqli">联系我们</li>
 <?php else:?>
-<li><a href="/site/intro/4">联系我们</a></li>
+<li><a href="/index.php/site/intro/4">联系我们</a></li>
 <?php endif;?>
 
 <?php if($id == 5):?>
 <li class="hli dqli">加入我们</li>
 <?php else:?>
-<li class="hli"><a href="/site/intro/5">加入我们</a></li>
+<li class="hli"><a href="/index.php/site/joinus">加入我们</a></li>
 <?php endif;?>
 
 </ul>
@@ -61,8 +61,8 @@
 <div class="zuo"><table border="0" cellpadding="0" cellspacing="0">
   <tbody><tr>
     <td valign="bottom">所在位置：</td>
-    <td valign="bottom" width="20"><a href="index.html"><img src="tupian/di_dh_shouye.jpg"></a></td>
-    <td valign="bottom"><a href="index.html">首页</a> &gt; 公司介绍 &gt; 公司简介</td>
+    <td valign="bottom" width="20"><a href="index.php"><img src="tupian/di_dh_shouye.jpg"></a></td>
+    <td valign="bottom"><a href="index.php">首页</a> &gt; <a href="/index.php/site/intro/1">公司介绍</a> &gt; <?php echo $navigation;?></td>
   </tr>
 </tbody></table>
 </div>
