@@ -71,8 +71,6 @@ CREATE TABLE `auto_tuan` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='团购表';
 
 
-<<<<<<< HEAD
-=======
 #首页焦点图中图片表：
 CREATE TABLE `focus_pic` (
   `pid` int(11) NOT NULL auto_increment COMMENT '图片ID',
@@ -152,4 +150,3 @@ CREATE TABLE `auto_plan_buy` (
   `stae` tinyint(1) NOT NULL default '0' COMMENT '0为未处理状态,1为处理完的',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
->>>>>>> def13f43ceb548c0ba86e2a3f8d8c56504b78b59
