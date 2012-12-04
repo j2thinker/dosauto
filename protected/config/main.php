@@ -54,10 +54,11 @@ return array(
 		*/
 		// uncomment the following to use a MySQL database
 		'db'=>array(
-			'connectionString' => 'mysql:host=10.210.213.74;dbname=dosauto',
+//			'connectionString' => 'mysql:host=10.210.213.74;dbname=dosauto',
+			'connectionString' => 'mysql:host=127.0.0.1;dbname=dosauto',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => '123456',
 			'charset' => 'utf8',
 		),
 		/* 'db'=>array(
@@ -115,6 +116,11 @@ return array(
 			"tuan" => array(
 					"团购管理"=>"/tuan/list"
 				),
+			"second" => array(
+					"二手车源" => "/second/list",
+					"二手车置换" => "/second/change",
+					"汽车精品" => "",
+				)
 		),
 
 		'navname' => array(

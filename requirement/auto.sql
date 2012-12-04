@@ -55,8 +55,8 @@ CREATE TABLE `auto_info` (
  `content` text NOT NULL COMMENT '信息详情',
  `ctime` int(11) NOT NULL COMMENT '信息创建时间',
  `endtime` int(11) NOT NULL COMMENT '失效时间',
- `category` int(11) NOT NULL DEFAULT '1' COMMENT '信息类别1.新闻，2.为活动，3.保养讲堂 4.衍生服务',
- `priority` tinyint(4) NOT NULL DEFAULT '1' COMMENT '信息权重 权重越高越靠前',
+ `category` int(11) NOT NULL DEFAULT 1 COMMENT '信息类别1.新闻，2.为活动，3.保养讲堂 4.衍生服务',
+ `priority` tinyint(4) NOT NULL DEFAULT 1 COMMENT '信息权重 权重越高越靠前',
  `state` tinyint(4) NOT NULL DEFAULT '0' COMMENT '信息状态 默认0.正常 1.删除 ',
  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -106,6 +106,7 @@ CREATE TABLE `page_focus_pic` (
   `tel` int(11) NOT NULL default 0 COMMENT '联系电话',
   `contact_addr` varchar(120) default '' COMMENT '联系地址',
   `email` varchar(30) default '' COMMENT 'email地址',
+  `ctime` int(11) NOT NULL default '0',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -132,6 +133,7 @@ CREATE TABLE `auto_secondhand_info` (
   `pic_four` varchar(120) NOT NULL default '' COMMENT '车辆图片4',
   `state` tinyint(4) NOT NULL default '0' COMMENT '状态（过期等）',
   `is_best` tinyint(1) NOT NULL default '0' COMMENT '0为默认值，1为精品',
+  `ctime` int(11) NOT NULL default '0',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
