@@ -8,7 +8,6 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'汽车管理系统',
-	
 	// preloading 'log' component
 	//'preload'=>array('log'),
 
@@ -54,7 +53,7 @@ return array(
 		*/
 		// uncomment the following to use a MySQL database
 		'db'=>array(
-			'connectionString' => 'mysql:host=180.86.128.29;dbname=dosauto',
+			'connectionString' => 'mysql:host=180.86.187.226;dbname=dosauto',
 			'emulatePrepare' => true,
 			'username' => 'dosauto_f',
 			'password' => 'root',
@@ -128,7 +127,7 @@ return array(
 			6	=> '保养讲堂'
 		),
 
-		"attach" => "/attachment/",
-		"frontnav"=>include(dirname(__FILE__) ."/menu.php")
+		"attach" 	=> "/attachment/",
+		"channel"	=> include(dirname(__FILE__) ."/channel.php")
 	),
 );

@@ -24,18 +24,18 @@
 		</div>
 		<div class="daohangk huis_12" id="div_center">
 		<ul id="nav">
-			<?php $menu = array_reverse(Yii::app()->params['frontnav']) ;?>
-			<?php foreach ($menu as $contxt => $subs):?>
-			<?php if (is_array($subs)):?>
-			<li><?php echo $contxt ;?>
+			<?php $menu = array_reverse(Yii::app()->params['channel']) ;?>
+			<?php foreach ($menu as $con => $coninfo):?>
+			<?php if (isset($coninfo['actions']) && is_array($coninfo['actions'])):?>
+			<li><?php echo $coninfo['title'] ;?>
 				<UL>
-					<?php foreach ($subs as $scon => $sact):?>
-					<LI><A href="/index.php<?php echo $sact ?>"><?php echo $scon ;?></A></LI>
+					<?php foreach ($coninfo['actions'] as $act => $actname):?>
+					<LI><A href="/index.php/<?php echo $con;?>/<?php echo $act ;?>"><?php echo $actname ;?></A></LI>
 					<?php endforeach; ?>
 				</UL>
 			</li>
 			<?php else :?>
-				<li><a href="/index.php<?php echo $subs ;?>"><?php echo $contxt ;?></a></li>
+				<li><a href="/index.php/site/index"><?php echo $coninfo['title'] ;?></a></li>
 			<?php endif ;?>
 			<?php endforeach;?>
 			</ul>
@@ -44,6 +44,7 @@
 	<!-- Main content -->
 	<?php echo $content; ?>
 	<!-- End of main content -->
+	<?php $this->widget('LocateWidget')?>
 	<div class=" qingchu"></div>
 	<div class="dik">
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">

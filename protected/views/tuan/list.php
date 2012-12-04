@@ -20,15 +20,7 @@
 </div>
 
 <div class="gs_lbk hei_12">
-<ul>
-<li><a href="xw_huodong.html">最新活动</a></li>
-<li><a href="xw_cuxiao.html">优惠促销</a></li>
-<li><a href="xw_gongsi.html">公司新闻</a></li>
-<li><a href="xw_hangye.html">行业新闻</a></li>
-<li><a href="xw_fuwu.html">衍生服务</a></li>
-<li class="dqli">团购消息</li>
-<li class="hli"><a href="xw_baoyang.html">保养讲堂</a></li>
-</ul>
+<?php $this->widget("InfonavWidget") ;?>
 </div>
 
 
@@ -56,7 +48,6 @@
 </div>
 <div class="qingchu"></div>
 </div>
-
 
 <div class="di_dhk huis_12">
 <div class="zuo"><table border="0" cellspacing="0" cellpadding="0">

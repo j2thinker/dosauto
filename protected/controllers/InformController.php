@@ -41,6 +41,11 @@ class InformController extends Controller{
         $this->render('reclist' , array('pages'=>$pager , 'reclist'=>$reclist)) ;
 	}
 	
+	public function actionGroupBuy()
+	{
+		$this->render('groupbuylist');
+	}
+	
 	public function actionActivity(){
 		$this->renderTemplate(3) ; 
 	}
@@ -61,7 +66,7 @@ class InformController extends Controller{
 		$this->renderTemplate(5) ; 
 	}
 	
-	public function actionClassroom(){
+	public function actionMainten(){
 		$this->renderTemplate(6) ; 
 	}
 	
