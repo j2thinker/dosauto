@@ -11,7 +11,7 @@ return array(
 	"新闻中心" =>array(
 			"最新活动" => "/inform/activity",
 			"优惠促销" => "/inform/sale",
-			"公司新闻" => "/inform/news",
+			"公司新闻" => "/inform/compnews",
 			"行业新闻" => "/inform/businews",	
 			"衍生服务" => "/inform/service",
 			"团购消息" => "/tuan/list",
@@ -24,11 +24,6 @@ return array(
 	),
 	"汽车展厅" =>array(
 			"公司简介" => "",
-			"公司简介" => "",
-			"公司简介" => "",	
-			"公司简介" => "",
-			"公司简介" => "",
-			"公司简介" => ""
 	),
 	"购车指南" =>array(
 			"衍生产品" => "",
