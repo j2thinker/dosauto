@@ -1,9 +1,9 @@
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl;?>/kindeditor/kindeditor-min.js"></script>
 <div class="nav">
-	<div style="width:90%;float:left;font-size:14px ;">&nbsp;&nbsp;&nbsp;&nbsp;<b><?php if( isset($is_edit) && $is_edit ):?>修改<?php else:?>添加<?php endif?> <?php if(isset($is_best_add) && $is_best_add):?>汽车精品<?php else:?>二手车源<?php endif?>信息</b></div>
+	<div style="width:90%;float:left;font-size:14px ;">&nbsp;&nbsp;&nbsp;&nbsp;<b><?php if( isset($is_edit) && $is_edit ):?>修改<?php else:?>添加<?php endif?> <?php if(isset($from_best) && $from_best):?>汽车精品<?php else:?>二手车源<?php endif?>信息</b></div>
 </div>
 <div class="con">
-	<form method="post" action="/index.php/second/save">
+	<form method="post" action="/index.php/second/save<?php if(isset($from_best) && $from_best):?>?from=best<?php endif;?>">
 	<table border="1" width="98%" style="margin-top:20px ;" cellpadding=10 cellspacing=0>
 		<tr>
 			<td width="10%">标题</td>
@@ -119,7 +119,7 @@
 		</tr>
 		
 		
-		<?php if(!isset($is_best_add)):?>
+		<?php if(!isset($from_best)):?>
 			<tr>
 				<td width="10%">是否为精品</td>
 				<td width="90%" align="left">
@@ -142,7 +142,7 @@
 				<?php if( isset($is_edit) && $is_edit ):?>
 					<input type="hidden"  name="id" value="<?=$list['id']?>"/>
 				<?php endif?>
-				<?php if(isset($is_best_add) && $is_best_add):?>
+				<?php if(isset($from_best) && $from_best):?>
 					<input type="hidden"  name="is_best" value="1"/>
 				<?php endif?>
 				<input type="submit" value="<?php if( isset($is_edit) && $is_edit ):?>确认修改<?php else:?>添加<?php endif?>" /> <input type="button" value="返回上一页" onclick="javascript:history.go(-1);" />

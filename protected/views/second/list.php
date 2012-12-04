@@ -23,7 +23,7 @@
 		    <td align="left" valign="top">发布时间：<?php echo $secondinfo['pubtime'];?></td>
 		  </tr>
 		   <tr>
-		    	<td align="center" valign="top"><a href="/index.php/second/edit?id=<?php echo $secondinfo['id'];?>">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php/second/del?id=<?php echo $secondinfo['id'];?>">删除</a></td>
+		    	<td align="center" valign="top"><a href="/index.php/second/edit?id=<?php echo $secondinfo['id'];?><?php if(isset($is_best) && $is_best):?>&from=best<?php endif;?>">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php/second/del?id=<?php echo $secondinfo['id'];?><?php if(isset($is_best) && $is_best):?>&from=best<?php endif;?>">删除</a></td>
 		  </tr>
 		</tbody>
 	  </table>

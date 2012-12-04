@@ -27,7 +27,7 @@ class SecondController extends Controller{
 		$model = new SecondInfoForm();
 		$is_best = yii::app()->request->getParam("best", 0);
 		if($is_best == 1){			//精品汽车
-			$data['is_best_add'] = 1; 
+			$data['from_best'] = 1; 
 		}else{
 		}
 		$this->render('add', $data);
@@ -58,7 +58,12 @@ class SecondController extends Controller{
 		$model->pic_three = yii::app()->request->getPost("pic_three", "");
 		$model->pic_four = yii::app()->request->getPost("pic_four", "");
 		$re = $model->add();
-		$this->actionList();
+		$from = yii::app()->request->getParam("from", '');
+		if($from == 'best' ){
+			$this->actionBest();
+		}else{
+			$this->actionList();
+		}
 		
 	}
 	
@@ -68,7 +73,12 @@ class SecondController extends Controller{
 		$model = new SecondInfoForm();
 		$model->id = yii::app()->request->getParam("id", 0);
 		$model->delete();
-		$this->actionList();
+		$from = yii::app()->request->getParam("from", '');
+		if($from == 'best'){
+			$this->actionBest();
+		}else{
+			$this->actionList();
+		}
 	}
 	
 	//编辑二手车信息
@@ -79,6 +89,10 @@ class SecondController extends Controller{
 		$list = $model->get_list_by_id();
 		$data['list'] = $list;
 		$data['is_edit'] = true;
+		$from = yii::app()->request->getParam("from", '');
+		if($from == 'best'){
+			$data['from_best'] = true;
+		}
 		$this->render('add', $data) ;
 	}
 	
