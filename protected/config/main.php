@@ -54,10 +54,10 @@ return array(
 		*/
 		// uncomment the following to use a MySQL database
 		'db'=>array(
-			'connectionString' => 'mysql:host=10.210.213.74;dbname=dosauto',
+			'connectionString' => 'mysql:host=180.86.128.29;dbname=dosauto',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '123456',
+			'username' => 'dosauto_f',
+			'password' => 'root',
 			'charset' => 'utf8',
 		),
 		'errorHandler'=>array(
