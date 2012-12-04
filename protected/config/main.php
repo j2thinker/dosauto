@@ -106,7 +106,7 @@ return array(
 			"second" => array(
 					"二手车源" => "/second/list",
 					"二手车置换" => "/second/change",
-					"汽车精品" => "",
+					"汽车精品" => "/second/best",
 				)
 		),
 
