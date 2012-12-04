@@ -17,7 +17,7 @@ class IntroduceForm extends CFormModel{
 	}
 	public function get_list(){
 		$connection = Yii::app()->db;
-		$sql = "select * from `auto_introduce` where `intro_type`=:intro_type and `state`=:state order by `ctime` desc limit ". $this->limit;
+		$sql = "select * from `auto_introduce` where `intro_type`=:intro_type and `state`=:state order by `ctime` desc ";
 		$command=$connection->createCommand($sql);
 		$command->bindValues(array(":state"=>$this->state, ":intro_type"=>$this->intro_type));
 		$list = $command->queryAll(); 

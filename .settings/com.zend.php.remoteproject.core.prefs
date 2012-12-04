@@ -1,7 +1,7 @@
-#Mon Dec 03 01:47:33 CST 2012
+#Tue Dec 04 23:08:51 CST 2012
 LaunchURL=http\://server/folder
 Save\ Mode=ON_SAVE
 SelectedHostGUID=12ac8dca-40b6-4b01-bd06-7c92d10d6a67
 UploadFolder=/
 eclipse.preferences.version=1
-isRemoteProjectEnabled=false
+isRemoteProjectEnabled=true

@@ -7,7 +7,7 @@
 #intro_type  tinyint 公司简介 品牌历史	销售团队	联系我们 车主关怀 衍生产品 保养预估
 
 DROP TABLE  IF EXISTS `auto_introduce`;
-CREATE TABLE `auto_introduce`(
+CREATE TABLE IF NOT EXISTS `auto_introduce`(
 `id` int(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
 `title` varchar(120) not null default '',
 `content` text,
@@ -23,7 +23,7 @@ CREATE TABLE `auto_introduce`(
 #类型(type，为将来作导航使用)  cate tinyint
 
 DROP TABLE  IF EXISTS `auto_jobs_cate`;
-CREATE TABLE `auto_jobs_cate`(
+CREATE TABLE IF NOT EXISTS `auto_jobs_cate`(
 `id` int(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
 `cate_name` varchar(120) not null default '',
 `cate` tinyint(1) not null default 0
@@ -37,7 +37,7 @@ CREATE TABLE `auto_jobs_cate`(
 #所在分类id. cate_id int 
 
 DROP TABLE  IF EXISTS `auto_jobs_info`;
-CREATE TABLE `auto_jobs_info`(
+CREATE TABLE IF NOT EXISTS `auto_jobs_info`(
 `id` int(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
 `jobs_name` varchar(120) not null default '',
 `jobs_info` text not null default '',
@@ -47,7 +47,7 @@ CREATE TABLE `auto_jobs_info`(
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 #信息表，表名有auto_news 变更为 auto_info,表中字段略有变更
-CREATE TABLE `auto_info` (
+CREATE TABLE IF NOT EXISTS `auto_info` (
  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
  `title` varchar(120) NOT NULL DEFAULT ' ' COMMENT '信息标题',
  `pic_url` varchar(120) NOT NULL DEFAULT ' ' COMMENT '图片地址',
@@ -62,7 +62,7 @@ CREATE TABLE `auto_info` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 #团购表
-CREATE TABLE `auto_tuan` (
+CREATE TABLE IF NOT EXISTS `auto_tuan` (
  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
  `pic_url` varchar(120) NOT NULL COMMENT '显示图片',
  `link` varchar(120) NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE `auto_tuan` (
 
 
 #首页焦点图中图片表：
-CREATE TABLE `focus_pic` (
+CREATE TABLE IF NOT EXISTS `focus_pic` (
   `pid` int(11) NOT NULL auto_increment COMMENT '图片ID',
   `pic_src` varchar(120) NOT NULL default '' COMMENT '图片地址',
   `pic_link` varchar(120) NOT NULL default '' COMMENT '链接地址',
@@ -80,7 +80,7 @@ CREATE TABLE `focus_pic` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;      
 
 #首页焦点图中页面焦点图表
-CREATE TABLE `page_focus_pic` (
+CREATE TABLE IF NOT EXISTS `page_focus_pic` (
   `id` int(11) NOT NULL auto_increment COMMENT '主键',
   `page_id` int(11) NOT NULL default 0 COMMENT '页面ID',
   `pid_list` varchar(200) NOT NULL default '' COMMENT '图片ID列表',
@@ -89,7 +89,7 @@ CREATE TABLE `page_focus_pic` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 #二手车置换数据表：
- CREATE TABLE `auto_secondhand_change` (
+ CREATE TABLE IF NOT EXISTS `auto_secondhand_change` (
   `id` int(11) NOT NULL auto_increment COMMENT '主键',
   `cat` varchar(120) NOT NULL default '' COMMENT '车辆型号',
   `motor_output` varchar(120) NOT NULL default '' COMMENT '发动机排量',
@@ -112,7 +112,7 @@ CREATE TABLE `page_focus_pic` (
 
 
 #二手车源及汽车精品数据表：
-CREATE TABLE `auto_secondhand_info` (
+CREATE TABLE IF NOT EXISTS `auto_secondhand_info` (
   `id` int(11) NOT NULL auto_increment COMMENT '主键',
   `title` varchar(120) NOT NULL default '' COMMENT '标题',
   `cate` varchar(120) NOT NULL default '' COMMENT '车型/车系',
@@ -139,7 +139,7 @@ CREATE TABLE `auto_secondhand_info` (
 
 
 #新车预订表
-CREATE TABLE `auto_plan_buy` (
+CREATE TABLE IF NOT EXISTS `auto_plan_buy`(
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(120) NOT NULL default '' COMMENT '姓名',
   `tel` int(11) NOT NULL default '0' COMMENT '电话',

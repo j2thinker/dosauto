@@ -27,7 +27,7 @@ $ext_arr = array(
 $max_size = 1000000;
 
 $save_path = realpath($save_path) . '/';
-
+var_dump($save_path);
 //PHP上传失败
 if (!empty($_FILES['imgFile']['error'])) {
 	switch($_FILES['imgFile']['error']){
@@ -122,6 +122,7 @@ if (empty($_FILES) === false) {
 	if (move_uploaded_file($tmp_name, $file_path) === false) {
 		alert("上传文件失败。");
 	}
+	
 	@chmod($file_path, 0644);
 	$file_url = $save_url . $new_file_name;
 

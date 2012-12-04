@@ -69,7 +69,7 @@ class NewsmanController extends Controller{
 		$model->ctime		= time() ;
 		//Upload Images
 		$pic_url = CUploadedFile::getInstanceByName('pic_url');
-		$upload = "e:/localFile/".$pic_url->name ;
+		$upload = "../kindeditor/attached/".$pic_url->name ;
 		$pic_url->saveAs($upload);
 		$model->pic_url = $upload ;
 		if($model->save()){
