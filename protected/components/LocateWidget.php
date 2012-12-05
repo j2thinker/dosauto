@@ -9,7 +9,11 @@ class LocateWidget extends CWidget
 		if(!$isindex){
 			$data['conname'] = $channellist[$curcon]['title'] ;
 			$curact = Yii::app()->controller->action->id ;
-			$data['actname'] = $channellist[$curcon]['actions'][$curact] ;
+			if(isset($channellist[$curcon]['actions'][$curact])){
+				$data['actname'] = $channellist[$curcon]['actions'][$curact] ;
+			} else {
+				$data['actname'] = "" ;
+			}
 		}
 		$this->render('locate' ,$data) ;
 	}

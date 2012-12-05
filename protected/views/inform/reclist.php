@@ -5,7 +5,7 @@
 <div class="xw_zhutik hui_12 hangg2">
 <ul>
 	<?php foreach ($reclist as $key => $rec) :?>
-	<li> <a href="/index.php/inform/reclist?nid=<?php echo $rec['id']?>"><img src="/images/xw_tu1.jpg"/></a><br />
+	<li> <a href="/index.php/inform/detail?nid=<?php echo $rec['id']?>"><img src="/images/xw_tu1.jpg"/></a><br />
 	<span class="hei_14"><?php echo $rec['title']?></span><br />
 	<?php echo $rec['descript'] ;?>
 	</li>
