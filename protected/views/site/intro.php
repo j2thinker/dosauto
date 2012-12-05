@@ -17,40 +17,6 @@
 </div>
 </div>
 
-<div class="gs_lbk hei_12">
-<ul>
-<?php if($id == 1):?>
-<li class="dqli">公司简介</li>
-<?php else:?>
-<li><a href="/index.php/intro/activity">公司简介</a></li>
-<?php endif;?>
-
-<?php if($id == 2):?>
-<li class="dqli">品牌历史</li>
-<?php else:?>
-<li><a href="/index.php/intro/sale">品牌历史</a></li>
-<?php endif;?>
-
-<?php if($id == 3):?>
-<li class="dqli">销售团队</li>
-<?php else:?>
-<li><a href="/index.php/intro/compnews">销售团队</a></li>
-<?php endif;?>
-
-<?php if($id == 4):?>
-<li class="dqli">联系我们</li>
-<?php else:?>
-<li><a href="/index.php/intro/businews">联系我们</a></li>
-<?php endif;?>
-
-<?php if($id == 5):?>
-<li class="hli dqli">加入我们</li>
-<?php else:?>
-<li class="hli"><a href="/index.php/intro/service">加入我们</a></li>
-<?php endif;?>
-
-</ul>
-</div>
 
 <div class="gs_zhutik hui_12 hangg2">
 <?php echo $content;?>

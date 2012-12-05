@@ -19,16 +19,6 @@
 </div>
 </div>
 
-<div class="gs_lbk hei_12">
-<ul>
-
-<li><a href="/index.php/intro/activity">公司简介</a></li>
-<li><a href="/index.php/intro/sale">品牌历史</a></li>
-<li><a href="/index.php/intro/compnews">销售团队</a></li>
-<li><a href="/index.php/intro/businews">联系我们</a></li>
-<li class="hli dqli">加入我们</li>
-</ul>
-</div>
 
 <div class="gs_jiaruk hui_12 hangg2">
 
