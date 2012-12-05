@@ -33,11 +33,11 @@ return array(
 		'title'		=> "二手车服务",
 		'namepic'	=> "es_bt_fuwu.jpg" ,
 		'actions'	=> array(
-			'activity'	=> '二手车源',
-			'sale'		=> '二手车置换',
-			'compnews'	=> '汽车精品'
+			'market'	=> '二手车源',
+			'renew'		=> '二手车置换',
+			'boutique'	=> '汽车精品'
 		),
-		'endact' => 'compnews'
+		'endact' => 'boutique'
 	),
 	'show'=> array(
 		'title'		=> "汽车展厅",

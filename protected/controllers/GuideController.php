@@ -5,7 +5,8 @@ class GuideController extends Controller
 	 * 衍生产品
 	 */
 	public function actionProduct(){
-		$this->render('product') ;
+		$data = array();
+		$this->render('product' , $data) ;
 	}
 	
 	/**

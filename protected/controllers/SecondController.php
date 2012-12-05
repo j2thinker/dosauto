@@ -105,5 +105,35 @@ class SecondController extends Controller{
 		$data['is_best'] = true;
 		$this->render('list', $data) ;
 	}
+	
+	//===============以下是前台展示==================
+	/**
+	 * 二手车源
+	 * @desc second hand car source 
+	 */
+	public function actionMarket()
+	{
+		$this->layout = "doslayout" ;
+		$data = array() ;
+		$this->render('market' , $data) ;
+	}
 
+	/**
+	 * 二手车置换
+	 * Enter description here ...
+	 */
+	public function actionRenew(){
+		$this->layout = "doslayout" ;
+		$this->render('renew') ;
+	}
+	
+	/**
+	 * 汽车精品
+	 * Enter description here ...
+	 */
+	public function actionBoutique(){
+		$this->layout = "doslayout" ;
+		$data = array() ;
+		$this->render('boutique' , $data) ;
+	}
 }
