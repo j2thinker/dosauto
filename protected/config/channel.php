@@ -3,7 +3,7 @@ return array(
 	'site'=> array(
 		'title' 	=> "首页",
 	),
-	'intro'=> array(
+	'site'=> array(
 		'title'		=> "公司介绍",
 		'namepic'	=> "xw_bt_zhongxin.jpg" ,
 		'actions'	=> array(

@@ -22,10 +22,10 @@
 <div class="gs_lbk hei_12">
 <ul>
 
-<li><a href="/index.php/site/intro/1">公司简介</a></li>
-<li><a href="/index.php/site/intro/2">品牌历史</a></li>
-<li><a href="/index.php/site/intro/3">销售团队</a></li>
-<li><a href="/index.php/site/intro/4">联系我们</a></li>
+<li><a href="/index.php/site/activity">公司简介</a></li>
+<li><a href="/index.php/site/sale">品牌历史</a></li>
+<li><a href="/index.php/site/compnews">销售团队</a></li>
+<li><a href="/index.php/site/businews">联系我们</a></li>
 <li class="hli dqli">加入我们</li>
 </ul>
 </div>

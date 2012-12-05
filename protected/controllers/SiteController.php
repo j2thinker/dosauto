@@ -111,8 +111,8 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 	#简介页面，目前不做区分
-	public function actionIntro(){
-		$intro_type = $_GET['id'];
+	public function actionIntro($type){
+		$intro_type = $type;
 		$model = new IntroduceForm();
 		$model->intro_type = $intro_type;
 		$model->limit = 1;
@@ -128,8 +128,23 @@ class SiteController extends Controller
 		$data['content'] = $content;
 		$this->render('intro', $data);
 	}
-	
-	public function actionJoinus(){
+	public function actionActivity()
+	{
+		$this->actionIntro(1);
+	}
+	public function actionSale()
+	{
+		$this->actionIntro(2);
+	}
+	public function actionCompnews()
+	{
+		$this->actionIntro(3);
+	}
+	public function actionBusinews()
+	{
+		$this->actionIntro(4);
+	}
+	public function actionService(){
 		$data = array();
 		#获取分类列表
 		$model = new JobscateForm();
