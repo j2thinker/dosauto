@@ -7,6 +7,7 @@
 body {
 	margin:0 4px ;
 	background-image: url(/images/admin/left.gif);
+	background-repeat:repeat-y ;
 }
 -->
 </style>

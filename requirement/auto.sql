@@ -1,3 +1,4 @@
+use dosauto ;
 #auto_introduce
 #标题 简介内容(支持文字和图片) 发表日期 状态(删除) 类型(车主关怀/)
 #title varchar(120)
