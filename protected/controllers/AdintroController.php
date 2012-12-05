@@ -61,7 +61,7 @@ class AdintroController extends Controller{
 		$_REQUEST['id'] = $intro_type;
 		$this->actionCompany();
 	}
-	public function actionDelete(){
+	public function actionDel(){
 		$id = yii::app()->request->getParam("id", 0);
 		$intro_type = yii::app()->request->getParam("intro_type", 0);
 		$model = new IntroduceForm();
