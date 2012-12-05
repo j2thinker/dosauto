@@ -43,6 +43,7 @@ class InformController extends Controller{
 	
 	public function actionGroupBuy()
 	{
+		//get data from database
 		$this->render('groupbuylist');
 	}
 	

@@ -5,13 +5,13 @@ return array(
 	),
 	'intro'=> array(
 		'title'		=> "公司介绍",
-		'namepic'	=> "xw_bt_zhongxin.jpg" ,
+		'namepic'	=> "gs_bt_jieshao.jpg" ,
 		'actions'	=> array(
-			'activity'	=> '公司简介',
-			'sale'		=> '品牌历史',
-			'compnews'	=> '销售团队',
-			'businews'	=> '联系我们',
-			'service'	=> '加入我们',
+			'about'	=> '公司简介',
+			'history'	=> '品牌历史',
+			'group'		=> '销售团队',
+			'contact'	=> '联系我们',
+			'joinus'	=> '加入我们',
 		),
 		'endact' => 'service'
 	),
@@ -31,13 +31,13 @@ return array(
 	),
 	'second'=> array(
 		'title'		=> "二手车服务",
-		'namepic'	=> "xw_bt_zhongxin.jpg" ,
+		'namepic'	=> "es_bt_fuwu.jpg" ,
 		'actions'	=> array(
-			'activity'	=> '二手车源',
-			'sale'		=> '二手车置换',
-			'compnews'	=> '汽车精品'
+			'market'	=> '二手车源',
+			'renew'		=> '二手车置换',
+			'boutique'	=> '汽车精品'
 		),
-		'endact' => 'compnews'
+		'endact' => 'boutique'
 	),
 	'show'=> array(
 		'title'		=> "汽车展厅",
@@ -52,31 +52,31 @@ return array(
 	),
 	'guide'=> array(
 		'title'		=> "购车指南",
-		'namepic'	=> "xw_bt_zhongxin.jpg" ,
+		'namepic'	=> "gc_bt_zhinan.jpg" ,
 		'actions'	=> array(
-			'activity'	=> '衍生产品',
-			'sale'		=> '新车预订',
-			'compnews'	=> '车贷计算器'
+			'product'	=> '衍生产品',
+			'order'		=> '新车预订',
+			'loan'	=> '车贷计算器'
 		),
-		'endact' => 'compnews'
+		'endact' => 'loan'
 	),
 	'service'=> array(
 		'title'		=> "售后服务",
-		'namepic'	=> "xw_bt_zhongxin.jpg" ,
+		'namepic'	=> "sh_bt_fuwu.jpg" ,
 		'actions'	=> array(
-			'activity'	=> '预约试驾',
-			'sale'		=> '保养评估'
+			'drivebook'	=> '预约试驾',
+			'mainten'		=> '保养评估'
 		),
 		'endact' => 'sale'
 	),
 	'club'=> array(
 		'title'		=> "俱乐部",
-		'namepic'	=> "xw_bt_zhongxin.jpg" ,
+		'namepic'	=> "jl_bt_julebu.jpg" ,
 		'actions'	=> array(
-			'activity'	=> '车主关怀',
-			'sale'		=> '车友活动',
-			'compnews'	=> '往期活动回顾'
+			'care'		=> '车主关怀',
+			'activity'	=> '车友活动',
+			'review'	=> '往期活动回顾'
 		),
-		'endact' => 'compnews'
+		'endact' => 'review'
 	)
 ) ;

@@ -7,18 +7,7 @@ class IntroController extends Controller
 	 */
 	public function actions()
 	{
-		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
-			'captcha'=>array(
-				'class'=>'CCaptchaAction',
-				'backColor'=>0xFFFFFF,
-			),
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
-			'page'=>array(
-				'class'=>'CViewAction',
-			),
-		);
+		
 	}
 
 	/**
@@ -32,89 +21,13 @@ class IntroController extends Controller
 		$this->render('index');
 	}
 
-	public function actionTest()
-	{
-		$this->render('test') ;
-	}
 	/**
-	 * This is the action to handle external exceptions.
+	 * Get introduce information by type
+	 * @param unknown_type $type
 	 */
-	public function actionError()
-	{
-		if($error=Yii::app()->errorHandler->error)
-		{
-			if(Yii::app()->request->isAjaxRequest)
-				echo $error['message'];
-			else
-				$this->render('error', $error);
-		}
-	}
-
-	/**
-	 * Displays the contact page
-	 */
-	public function actionContact()
-	{
-		$model=new ContactForm;
-		if(isset($_POST['ContactForm']))
-		{
-			$model->attributes=$_POST['ContactForm'];
-			if($model->validate())
-			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
-				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
-				$headers="From: $name <{$model->email}>\r\n".
-					"Reply-To: {$model->email}\r\n".
-					"MIME-Version: 1.0\r\n".
-					"Content-type: text/plain; charset=UTF-8";
-
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
-		}
-		$this->render('contact',array('model'=>$model));
-	}
-
-	/**
-	 * Displays the login page
-	 */
-	public function actionLogin()
-	{
-		$model=new LoginForm;
-
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
-	}
-
-	/**
-	 * Logs out the current user and redirect to homepage.
-	 */
-	public function actionLogout()
-	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
-	}
-	#简介页面，目前不做区分
-	public function actionIntro($type){
-		$intro_type = $type;
+	private function getInfoByType($type){
 		$model = new IntroduceForm();
-		$model->intro_type = $intro_type;
+		$model->intro_type = $type ;
 		$model->limit = 1;
 		$model->state = 1;
 		$info = $model->get_list();
@@ -122,29 +35,48 @@ class IntroController extends Controller
 		if($info && isset($info[0]) && isset($info[0]['content'])){
 			$content = $info[0]['content'];
 		}
-		$list = array(1=>'公司简介',2=>'品牌历史',3=>'销售团队',4=>'联系我们');
-		$data['navigation'] = $list[$intro_type];
-		$data['id'] = $intro_type;
+		//$list = array(1=>'公司简介',2=>'品牌历史',3=>'销售团队',4=>'联系我们');
 		$data['content'] = $content;
-		$this->render('intro', $data);
+		return $data ;
 	}
-	public function actionActivity()
-	{
-		$this->actionIntro(1);
+	
+	/**
+	 * About Company
+	 * Enter description here ...
+	 */
+	public function actionAbout(){
+		$data = $this->getInfoByType(1);
+		$this->render('intro' , $data) ;
 	}
-	public function actionSale()
-	{
-		$this->actionIntro(2);
+	
+	/**
+	 * Product History
+	 */
+	public function actionHistory(){
+		$data = $this->getInfoByType(2) ;
+		$this->render('intro' ,$data) ;
 	}
-	public function actionCompnews()
-	{
-		$this->actionIntro(3);
+	
+	/**
+	 * Sale Group
+	 */
+	public function actionGroup(){
+		$data = $this->getInfoByType(3);
+		$this->render('intro' , $data) ;
 	}
-	public function actionBusinews()
-	{
-		$this->actionIntro(4);
+	
+	/**
+	 * Contact us
+	 */
+	public function actionContact(){
+		$data = $this->getInfoByType(4) ;
+		$this->render('intro' ,$data) ;
 	}
-	public function actionService(){
+	
+	/**
+	 * Join Us
+	 */
+	public function actionJoinus(){
 		$data = array();
 		#获取分类列表
 		$model = new JobscateForm();

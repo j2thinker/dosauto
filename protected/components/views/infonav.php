@@ -1,5 +1,5 @@
 <div class="gs_btk">
-<div class="zuo"><img src="/images/xw_bt_zhongxin.jpg"/></div>
+<div class="zuo"><img src="/images/<?php echo $navinfo['namepic'] ;?>"/></div>
 <div class="you">
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
