@@ -53,7 +53,7 @@ return array(
 		*/
 		// uncomment the following to use a MySQL database
 		'db'=>array(
-			'connectionString' => 'mysql:host=180.86.187.226;dbname=dosauto',
+			'connectionString' => 'mysql:host=180.86.128.29;dbname=dosauto',
 			'emulatePrepare' => true,
 			'username' => 'dosauto_f',
 			'password' => 'root',

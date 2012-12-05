@@ -7,11 +7,11 @@ return array(
 		'title'		=> "公司介绍",
 		'namepic'	=> "xw_bt_zhongxin.jpg" ,
 		'actions'	=> array(
-			'activity'	=> '公司简介',
-			'sale'		=> '品牌历史',
-			'compnews'	=> '销售团队',
-			'businews'	=> '联系我们',
-			'service'	=> '加入我们',
+			'about'	=> '公司简介',
+			'history'	=> '品牌历史',
+			'group'		=> '销售团队',
+			'contact'	=> '联系我们',
+			'joinus'	=> '加入我们',
 		),
 		'endact' => 'service'
 	),
