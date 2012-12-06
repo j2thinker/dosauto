@@ -67,6 +67,7 @@ CREATE TABLE IF NOT EXISTS `auto_tuan` (
  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
  `pic_url` varchar(120) NOT NULL COMMENT '显示图片',
  `link` varchar(120) NOT NULL,
+ `status` tinyint not null default 1,
  PRIMARY KEY (`id`)
 
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='团购表';
