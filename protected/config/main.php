@@ -52,14 +52,14 @@ return array(
 		),
 		*/
 		// uncomment the following to use a MySQL database
-		'db'=>array(
+		'db1'=>array(
 			'connectionString' => 'mysql:host=180.86.128.29;dbname=dosauto',
 			'emulatePrepare' => true,
 			'username' => 'dosauto_f',
 			'password' => 'root',
 			'charset' => 'utf8',
 		),
-		'db123'=>array(
+		'db'=>array(
 			'connectionString' => 'mysql:host=10.210.213.74;port=3306;dbname=test',
 			'emulatePrepare' => true,
 			'username' => 'root',

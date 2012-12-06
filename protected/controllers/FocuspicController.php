@@ -27,7 +27,12 @@ class FocuspicController extends Controller{
 		}
 		$this->actionPiclist();
 	}
-
+	public function actionDelete(){
+		$request = Yii::app()->request;
+		$id = $request->getParam('pid', NULL);
+		FocusPic::model()->findbyPk($id)->delete();
+		$this->actionPiclist() ;
+	}
 	public function actionFocus(){
 		$data = array();
 		$list = FocusPagePic::model()->findAll();

@@ -19,3 +19,12 @@ function menuFix() {
     }
 }
 window.onload=menuFix;
+
+function search_sub(){
+	var search_data = $("#search_data")[0].value;
+	if(!search_data){
+		return false;
+	}
+	
+	$(location).attr('href', '/index.php?/search/index&search_data='+search_data);
+}

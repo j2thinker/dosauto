@@ -20,8 +20,8 @@
 		  <table width="100%" border="0" cellspacing="0" cellpadding="0">
 		    <tr>
 		      <td align="right" class="hui_12">北京运通博恩汽车销售服务有限公司</td>
-		      <td width="150" align="right"><input name="textfield" type="text" class="bd_wbk" id="textfield" /></td>
-		      <td width="50" align="right"><input name="" type="button" class="bd_sousuo" value="搜 索" /></td>
+		      <td width="150" align="right"><input name="search_data" type="text" class="bd_wbk" id="search_data" /></td>
+		      <td width="50" align="right"><input name="" type="button" class="bd_sousuo" value="搜 索" onclick="search_sub();";/></td>
 		    </tr>
 		  </table>
 		</div>
