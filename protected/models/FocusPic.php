@@ -1,5 +1,8 @@
 <?php
 class FocusPic extends CActiveRecord{
+	public $pid;
+	public $pic_src;
+	public $pic_link;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @return AdminNotice the static model class

@@ -21,7 +21,7 @@
 			<td><?php echo $v['pid_list']?></td>
 			<td>
 			<a href="/index.php/focuspic/focusadd?edit_type=1&id=<?php echo $v['id']?>" target="_self">编辑</a>
-			<a href="/index.php/focuspic/del?id=<?php echo $v['id']?>" target="_self">删除</a>
+			<a href="/index.php/focuspic/focusdel?id=<?php echo $v['id']?>" target="_self">删除</a>
 			</td>
 		</tr>
 		<?php endforeach;?>

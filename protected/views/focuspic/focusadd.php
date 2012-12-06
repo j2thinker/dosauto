@@ -9,7 +9,7 @@
 			<td width="90%" align="left">
 				<select name="page_id">
 				<?php foreach ($channel as $v):?>
-				<option value="<?php echo $v['id'];?>" <?php if($channel_id==$v['id']):?>selected="selected"<?php endif;?>><?php echo $v['title'];?></option>
+				<option value="<?php echo $v['id'];?>" <?php if($reclist && $reclist['id']==$v['id']):?>selected="selected"<?php endif;?>><?php echo $v['title'];?></option>
 				<?php endforeach;?>
 				</select>
 			</td>
@@ -17,7 +17,7 @@
 		<tr>
 			<td>图片列表</td>
 			<td  align="left">
-				<input type="text" name="pid_list" size="90" value="<?php if(isset($pid_list) && $pid_list) echo $pid_list;?>" />
+				<input type="text" name="pid_list" size="90" value="<?php if($reclist && $reclist['pid_list']) echo $reclist['pid_list'];?>" />
 			</td>
 		</tr>
 		<tr>
@@ -26,6 +26,6 @@
 			</td>
 		</tr>
 	</table>
-	<input type="hidden" name="id" value="<?php if($id) echo $id;?>" />
+	<input type="hidden" name="id" value="<?php if($reclist && $reclist['id']) echo $reclist['id'];?>" />
 	</form>
 </div>

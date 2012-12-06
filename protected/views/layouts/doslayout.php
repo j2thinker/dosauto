@@ -5,8 +5,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>汽车销售服务有限公司</title>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/auto.css" />
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl ; ?>/js/nav.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/global.css" />
 
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl ; ?>/js/nav.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl ; ?>/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl ; ?>/js/slides.min.jquery.js"></script>
 </head>
 
 <body>
@@ -22,7 +25,8 @@
 		    </tr>
 		  </table>
 		</div>
-		<div class="daohangk huis_12" id="div_center">
+		<div class="daohangk huis_12" id="div_center" >
+		
 		<ul id="nav">
 			<?php $menu = array_reverse(Yii::app()->params['channel']) ;?>
 			<?php foreach ($menu as $con => $coninfo):?>

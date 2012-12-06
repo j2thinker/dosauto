@@ -1,4 +1,4 @@
-<div class="dingtuk"><img src="/images/gs_ding_tu.jpg"/></div>
+<!-- <div class="dingtuk"><img src="/images/gs_ding_tu.jpg"/></div> -->
 
 <?php $this->widget("InfonavWidget") ;?>
 
