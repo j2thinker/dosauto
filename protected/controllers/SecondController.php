@@ -1,6 +1,6 @@
 <?php
 /**
- * 二手车信息控制器
+ * 二手车信后台控制器
  * Enter description here ...
  * @author Administrator
  *

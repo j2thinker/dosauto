@@ -99,9 +99,9 @@ return array(
 					"保养讲堂"	=> "/newsman/classroom?cid=6",
 				),
 			"second"	=> array(
-					"二手车源"	=> "/newsman/activity?cid=3",
-					"二手车置换"	=> "/newsman/forsale?cid=4",
-					"汽车精品"	=> "/newsman/compnews?cid=1",
+					"二手车源"	=> "/second/list",
+					"二手车置换"	=> "/second/change",
+					"汽车精品"	=> "/second/best",
 				),
 			"show" => array(
 					"aaa"=>'/adintro/joinuscat',

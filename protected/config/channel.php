@@ -29,7 +29,7 @@ return array(
 		),
 		'endact' => 'mainten'
 	),
-	'second'=> array(
+	'secondcar'=> array(
 		'title'		=> "二手车服务",
 		'namepic'	=> "es_bt_fuwu.jpg" ,
 		'actions'	=> array(
