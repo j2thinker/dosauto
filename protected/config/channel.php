@@ -7,13 +7,13 @@ return array(
 		'title'		=> "公司介绍",
 		'namepic'	=> "gs_bt_jieshao.jpg" ,
 		'actions'	=> array(
-			'about'	=> '公司简介',
+			'about'		=> '公司简介',
 			'history'	=> '品牌历史',
 			'group'		=> '销售团队',
 			'contact'	=> '联系我们',
 			'joinus'	=> '加入我们',
 		),
-		'endact' => 'service'
+		'endact' 	=> 'service',
 	),
 	'inform'=> array(
 		'title'		=> "新闻中心",
@@ -37,7 +37,7 @@ return array(
 			'renew'		=> '二手车置换',
 			'boutique'	=> '汽车精品'
 		),
-		'endact' => 'boutique'
+		'endact' => 'boutique',
 	),
 	'show'=> array(
 		'title'		=> "汽车展厅",
@@ -65,9 +65,9 @@ return array(
 		'namepic'	=> "sh_bt_fuwu.jpg" ,
 		'actions'	=> array(
 			'drivebook'	=> '预约试驾',
-			'mainten'		=> '保养评估'
+			'mainten'	=> '保养评估'
 		),
-		'endact' => 'sale'
+		'endact' => 'mainten'
 	),
 	'club'=> array(
 		'title'		=> "俱乐部",
@@ -77,6 +77,6 @@ return array(
 			'activity'	=> '车友活动',
 			'review'	=> '往期活动回顾'
 		),
-		'endact' => 'review'
+		'endact' => 'review' 
 	)
 ) ;

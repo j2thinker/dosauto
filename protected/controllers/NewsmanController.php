@@ -69,7 +69,7 @@ class NewsmanController extends Controller{
 		$model->ctime		= time() ;
 		//Upload Images
 		$pic_url = CUploadedFile::getInstanceByName('pic_url');
-		$upload = "../kindeditor/attached/".$pic_url->name ;
+		$upload = dirname(dirname(dirname(__FILE__))) ."/kindeditor/attached/".$pic_url->name ;
 		$pic_url->saveAs($upload);
 		$model->pic_url = $upload ;
 		if($model->save()){
@@ -99,7 +99,7 @@ class NewsmanController extends Controller{
 		//Upload Images
 		$pic_url = CUploadedFile::getInstanceByName('pic_url');
 		if(!empty($pic_url->name)){
-			$upload = "e:/localFile/".$pic_url->name ;
+			$upload = "/kindeditor/attached/".$pic_url->name ;
 			$pic_url->saveAs($upload);
 			$assoc['pic_url'] = $upload ;
 		}

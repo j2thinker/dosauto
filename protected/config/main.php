@@ -82,42 +82,57 @@ return array(
 		//后台导航左侧模块
 		'adnav' => array(
 			"index"		=> array('轮播图管理'=>"/admin/switch"),
-			"newsman"	=> array(
-					"最新活动"=> "/newsman/activity?cid=3",
-					"优惠促销"=> "/newsman/forsale?cid=4",
-					"公司新闻"=> "/newsman/compnews?cid=1",
-					"行业新闻"=> "/newsman/businews?cid=2",
-					"衍生服务"=> "/newsman/service?cid=5",
-					"保养讲堂"=> "/newsman/classroom?cid=6",
-				),
 			"introman"	=> array(
 					"公司简介"=>'/adintro/company/1',
 					"品牌历史"=>'/adintro/company/2',
 					"销售团队"=>'/adintro/company/3',
 					"联系我们"=>'/adintro/company/4',
+					"加入我们"=>'/adintro/asdba/333'
 				),
-			"joinus" => array(
-					"加入我们-职位分类"=>'/adintro/joinuscat',
-					"加入我们-职位详情"=>'/adintro/joinus',
+			"newsman"	=> array(
+					"最新活动"	=> "/newsman/activity?cid=3",
+					"优惠促销"	=> "/newsman/forsale?cid=4",
+					"公司新闻"	=> "/newsman/compnews?cid=1",
+					"行业新闻"	=> "/newsman/businews?cid=2",
+					"衍生服务"	=> "/newsman/service?cid=5",
+					"团购消息"	=> "/tuan/adminlist/" ,
+					"保养讲堂"	=> "/newsman/classroom?cid=6",
+				),
+			"second"	=> array(
+					"二手车源"	=> "/newsman/activity?cid=3",
+					"二手车置换"	=> "/newsman/forsale?cid=4",
+					"汽车精品"	=> "/newsman/compnews?cid=1",
+				),
+			"show" => array(
+					"aaa"=>'/adintro/joinuscat',
+					"bbb"=>'/adintro/joinus',
 			),
-			"tuan" => array(
-					"团购管理"=>"/tuan/list"
+			"guide" => array(
+					"衍生产品"	=>"/tuan/list",
+					"新车预订"	=>"/tuan/list",
 				),
-			"second" => array(
-					"二手车源" => "/second/list",
-					"二手车置换" => "/second/change",
-					"汽车精品" => "/second/best",
-				)
+			"service" => array(
+					"预约试驾"	=> "/second/list",
+					"保养评估"	=> "/second/change",
+				),
+			"club"	=> array(
+				"车主关怀"		=> "/aaa" ,
+				"车友活动"		=> "/bbb" ,
+				"往期活动回顾"	=> "/ccc"
+			)
 		),
 
 		'navname' => array(
 			"index"		=> "首页",
-			"newsman"	=> "信息管理",
-			"introman"	=> "简介管理",
-			"joinus"	=> "招聘管理",
-			"tuan"		=> "团购信息",
-			"second"	=> "二手",
+			"introman"	=> "公司介绍",
+			"newsman"	=> "新闻中心",
+			"second"	=> "二手车服务",
+			"show"		=> "汽车展厅",
+			"guide"		=> "购车指南",
+			"service"	=> "售后服务" ,
+			"club"		=> "俱乐部"
 		),
+		
 		"cateinfo" => array(
 			1	=> '公司新闻' ,
 			2	=> '行业新闻' ,

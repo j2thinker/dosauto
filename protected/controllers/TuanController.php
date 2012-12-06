@@ -8,6 +8,7 @@ class TuanController extends Controller
 	}
 	
 	public function actionAdminList(){
+		
 		$this->render('adminlist') ;
 	}
 }

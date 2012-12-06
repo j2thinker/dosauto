@@ -24,7 +24,7 @@ class InformController extends Controller{
 		$pagesize = Yii::app()->request->getParam('pagesize' , 6) ;
 		$criteria = new CDbCriteria() ;
 		$criteria->addCondition("category={$type}") ;
-		$criteria->addCondition("state=1" , 'AND') ;
+		$criteria->addCondition("state=0" , 'AND') ;
 		$criteria->order ="priority desc ,ctime desc" ;
 		
 		$count = Info::model()->count($criteria);
