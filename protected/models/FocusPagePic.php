@@ -1,5 +1,8 @@
 <?php
 class FocusPagePic extends CActiveRecord{
+	public $id;
+	public $page_id;
+	public $pid_list;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @return AdminNotice the static model class
@@ -22,7 +25,7 @@ class FocusPagePic extends CActiveRecord{
 	 */
 	public function rules(){
 		return array(
-				array('page_id,page_list','required'),
+				array('page_id,pid_list','required'),
 			) ;
 	}
 	

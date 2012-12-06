@@ -1,11 +1,9 @@
 <?php
-class FocusPic extends CActiveRecord{
-	public $pid;
-	public $pic_src;
-	public $pic_link;
+class Tuan extends CActiveRecord
+{
 	/**
 	 * Returns the static model of the specified AR class.
-	 * @return AdminNotice the static model class
+	 * @return the static model class
 	 */
 	public static function model($className=__CLASS__){
 		return parent::model($className);
@@ -16,7 +14,7 @@ class FocusPic extends CActiveRecord{
 	 * @see CActiveRecord::tableName()
 	 */
 	public function tableName(){
-		return 'focus_pic';
+		return 'auto_tuan';
 	}
 	
 	/**
@@ -25,8 +23,7 @@ class FocusPic extends CActiveRecord{
 	 */
 	public function rules(){
 		return array(
-				array('pic_src','required'),
+				array('pic_url,link','required'),
 			) ;
 	}
-	
 }

@@ -1,4 +1,4 @@
-<div class="dingtuk"><img src="/images/xw_ding_tu.jpg"/></div>
+<!-- <div class="dingtuk"><img src="/images/xw_ding_tu.jpg"/></div> -->
 <!-- 信息导航 -->
 <?php $this->widget("InfonavWidget") ;?>
 

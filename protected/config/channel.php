@@ -1,9 +1,11 @@
 <?php
 return array(
 	'site'=> array(
+		'id' => 1,
 		'title' 	=> "首页",
 	),
 	'intro'=> array(
+		'id' => 2,
 		'title'		=> "公司介绍",
 		'namepic'	=> "gs_bt_jieshao.jpg" ,
 		'actions'	=> array(
@@ -16,6 +18,7 @@ return array(
 		'endact' 	=> 'service',
 	),
 	'inform'=> array(
+		'id' => 3,
 		'title'		=> "新闻中心",
 		'namepic'	=> "xw_bt_zhongxin.jpg" ,
 		'actions'	=> array(
@@ -30,6 +33,7 @@ return array(
 		'endact' => 'mainten'
 	),
 	'secondcar'=> array(
+		'id' => 4,
 		'title'		=> "二手车服务",
 		'namepic'	=> "es_bt_fuwu.jpg" ,
 		'actions'	=> array(
@@ -40,6 +44,7 @@ return array(
 		'endact' => 'boutique',
 	),
 	'show'=> array(
+		'id' => 5,
 		'title'		=> "汽车展厅",
 		'namepic'	=> "xw_bt_zhongxin.jpg" ,
 		'actions'	=> array(
@@ -51,6 +56,7 @@ return array(
 		'endact' => 'businews'
 	),
 	'guide'=> array(
+		'id' => 6,
 		'title'		=> "购车指南",
 		'namepic'	=> "gc_bt_zhinan.jpg" ,
 		'actions'	=> array(
@@ -61,6 +67,7 @@ return array(
 		'endact' => 'loan'
 	),
 	'service'=> array(
+		'id' => 7,
 		'title'		=> "售后服务",
 		'namepic'	=> "sh_bt_fuwu.jpg" ,
 		'actions'	=> array(
@@ -70,6 +77,7 @@ return array(
 		'endact' => 'mainten'
 	),
 	'club'=> array(
+		'id' => 8,
 		'title'		=> "俱乐部",
 		'namepic'	=> "jl_bt_julebu.jpg" ,
 		'actions'	=> array(

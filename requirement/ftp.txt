@@ -17,3 +17,11 @@ ftp密  码：xiao148
 http://180.86.187.226
 http://18086187.226.sqnet.cn
 
+
+'db'=>array(
+'connectionString' => 'mysql:host=180.86.128.29;dbname=dosauto',
+'emulatePrepare' => true,
+'username' => 'dosauto_f',
+'password' => 'root',
+'charset' => 'utf8',
+),

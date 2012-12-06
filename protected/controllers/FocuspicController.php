@@ -2,8 +2,8 @@
 class FocuspicController extends Controller{
 	public $layout = "adright" ;
 	public function actionPiclist(){
-		$reclist = FocusPic::model()->findAll() ;
-		$data['list'] = array();
+		$reclist = FocusPic::model()->findAll();
+		$data['list'] = $reclist;
 		$this->render('piclist', $data) ;
 	}
 	public function actionPicAdd(){
@@ -17,24 +17,62 @@ class FocuspicController extends Controller{
 		//Upload Images
 		$pic_url = CUploadedFile::getInstanceByName('pic_src');
 		$dir = dirname(dirname(dirname(__FILE__)));
-		$pic_url = "/kindeditor/attached/".$pic_url->name ;
-		$upload = $dir.$pic_url;
+		$pic_path = "/kindeditor/attached/".$pic_url->name ;
+		# hj3.weibo.com/kindeditor/attached/123.jpg
+		$upload = $dir.$pic_path;
 		$pic_url->saveAs($upload);
-		$model->pic_src = $pic_url ;
+		$model->pic_src = $pic_path ;
 		if($model->save()){
-			Yii::app()->end();
+			#Yii::app()->end();
 		}
 		$this->actionPiclist();
 	}
-	public function actionPicDelete(){
-		
+	public function actionDelete(){
+		$request = Yii::app()->request;
+		$id = $request->getParam('pid', NULL);
+		FocusPic::model()->findbyPk($id)->delete();
+		$this->actionPiclist() ;
 	}
 	public function actionFocus(){
-		$this->render("rightnav") ;
-		echo 123;
+		$data = array();
+		$list = FocusPagePic::model()->findAll();
+		$data['list'] = $list;
+		$this->render("focus", $data) ;
 	}
-	public function actionFocusDelete(){
-		$this->render("rightnav") ;
-		echo 123;
+	public function actionFocusAdd(){
+		$request = Yii::app()->request;
+		$data['id'] = $request->getParam("id", NULL);
+		$reclist = array();
+		if($data['id']){
+			#$model = new FocusPagePic();
+			#$model->id = $data['id'];
+			$criteria = new CDbCriteria(); 
+			$criteria->addCondition("id={$data['id']}") ; 
+			#$info = $model->find($criteria);
+			
+			$reclist = FocusPagePic::model()->find($criteria) ;
+		}
+		$data['reclist'] = $reclist;
+		$data['channel_id'] = 0;
+		$data['channel'] = Yii::app()->params['channel'];
+		$this->render("focusadd", $data) ;
 	}
+	
+	public function actionFocusSave(){
+		$model = new FocusPagePic() ;
+		$request = Yii::app()->request;
+		$model->id = $request->getPost('id', NULL);
+		$model->page_id = $request->getPost('page_id', 1);
+		$model->pid_list = $request->getPost('pid_list', "");
+
+		$save = $model->save();
+		$this->actionFocus() ;
+	}
+	public function actionFocusDel(){
+		$request = Yii::app()->request;
+		$id = $request->getParam('id', NULL);
+		FocusPagePic::model()->findbyPk($id)->delete();
+		$this->actionFocus() ;
+	}
+	
 }

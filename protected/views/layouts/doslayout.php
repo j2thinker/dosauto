@@ -5,8 +5,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>汽车销售服务有限公司</title>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/auto.css" />
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl ; ?>/js/nav.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/global.css" />
 
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl ; ?>/js/nav.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl ; ?>/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl ; ?>/js/slides.min.jquery.js"></script>
 </head>
 
 <body>
@@ -17,12 +20,13 @@
 		  <table width="100%" border="0" cellspacing="0" cellpadding="0">
 		    <tr>
 		      <td align="right" class="hui_12">北京运通博恩汽车销售服务有限公司</td>
-		      <td width="150" align="right"><input name="textfield" type="text" class="bd_wbk" id="textfield" /></td>
-		      <td width="50" align="right"><input name="" type="button" class="bd_sousuo" value="搜 索" /></td>
+		      <td width="150" align="right"><input name="search_data" type="text" class="bd_wbk" id="search_data" /></td>
+		      <td width="50" align="right"><input name="" type="button" class="bd_sousuo" value="搜 索" onclick="search_sub();";/></td>
 		    </tr>
 		  </table>
 		</div>
-		<div class="daohangk huis_12" id="div_center">
+		<div class="daohangk huis_12" id="div_center" >
+		
 		<ul id="nav">
 			<?php $menu = array_reverse(Yii::app()->params['channel']) ;?>
 			<?php foreach ($menu as $con => $coninfo):?>
