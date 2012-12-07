@@ -51,17 +51,26 @@
 	<?php $this->widget('LocateWidget')?>
 	<div class=" qingchu"></div>
 	<div class="dik">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
-		  <tr>
-		    <td align="left"><img src="/images/di_apptu.jpg" width="110" height="32" /></td>
-		    <td align="right" class="hui_16">销售热线：028-85950192　服务热线：028-85950561　救援热线：9510500 </td>
-		    <td width="10" align="right" class="ybk">&nbsp;</td>
-		    <td align="right" class="hui_12">一汽－大众各品牌网站</td>
-		    <td width="130" align="right"><select name="select" id="select">
-		      <option>请选择品牌网站</option>
-		    </select></td>
-		  </tr>
-		</table>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+	    <td align="left"><img src="/images/di_apptu.jpg" width="110" height="32" /></td>
+	    <td align="right" class="hui_16">销售热线：028-85950192　服务热线：028-85950561　救援热线：9510500 </td>
+	    <td width="10" align="right" class="ybk">&nbsp;</td>
+	    <td align="right" class="hui_12">一汽－大众各品牌网站</td>
+	    <td width="130" align="right"><div class="di_pinpank you" onmouseover="dik()" onmouseout="dib()">请选择品牌网站
+	    <ul id="dipin" class="yincang">
+	    <li><a href="http://vw.faw-vw.com/index.php/component/brand/?task=borashare&brand_id=10" target="_blank" >全新宝来</a></li>
+	    <li><a href="http://vw.faw-vw.com/index.php/component/brand/?brand_id=6" target="_blank" >CC</a></li>
+	    <li><a href="http://vw.faw-vw.com/index.php/component/brand/?brand_id=2" target="_blank" >高尔夫</a></li>
+	    <li><a href="http://www.golfcars.com.cn/gti/" target="_blank" >GTI</a></li>
+	    <li><a href="http://vw.faw-vw.com/index.php/component/brand/?brand_id=1" target="_blank" >宝来</a></li>
+	    <li><a href="http://vw.faw-vw.com/jetta_story/web/third/index" target="_blank" >捷达</a></li>
+	    <li><a href="http://sagitar.faw-vw.com/" target="_blank" >全新速腾</a></li>
+	    <li><a href="http://vw.faw-vw.com/magotan_life/" target="_blank" >迈腾</a></li>
+	    </ul>
+	    </div></td>
+	  </tr>
+	</table>
 	</div>
 </div>
 </body>

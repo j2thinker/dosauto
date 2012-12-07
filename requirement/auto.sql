@@ -71,7 +71,7 @@ CREATE TABLE `auto_tuan` (
  `ctime` int(11) NOT NULL COMMENT '创建时间',
  `priority` tinyint(4) NOT NULL DEFAULT '0' COMMENT '权重',
  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='团购表'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='团购表';
 
 
 #首页焦点图中图片表：
