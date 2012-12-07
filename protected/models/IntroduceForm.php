@@ -1,6 +1,6 @@
 <?php
 
-class IntroduceForm extends CFormModel{
+class IntroduceForm extends CActiveRecord{
 	public $id;
 	public $title;
 	public $content;
@@ -8,6 +8,12 @@ class IntroduceForm extends CFormModel{
 	public $state;
 	public $intro_type = 1;
 	public $limit = 1;
+	public static function model($className=__CLASS__){
+		return parent::model($className);
+	}
+	public function tableName(){
+		return 'auto_introduce';
+	}
 	public function save(){
 		$connection = Yii::app()->db;
 		$sql = "replace into `auto_introduce` set `id`=:id, `title`=:title, `content`=:content, `ctime`=:ctime, `state`=:state, `intro_type`=:intro_type";

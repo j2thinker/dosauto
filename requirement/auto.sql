@@ -153,3 +153,13 @@ CREATE TABLE IF NOT EXISTS `auto_plan_buy`(
   `stae` tinyint(1) NOT NULL default '0' COMMENT '0为未处理状态,1为处理完的',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+#新闻/简介搜索表
+CREATE TABLE IF NOT EXISTS `auto_title`(
+`id` int(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`cat` tinyint(1) unsigned not null default 0,
+`source_id` int(11) not null default 0,
+`title` varchar(120) not null default ''
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
