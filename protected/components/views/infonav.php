@@ -1,3 +1,47 @@
+<!-- <div class="dingtuk"><img src="/images/gs_ding_tu.jpg"/></div>  -->
+<?php if (count($ding_img_urls)>1):?>
+<script>
+	$(function(){
+		$('#slides').slides({
+			preload: true,
+			preloadImage: '/images/focus/loading.gif',
+			play: 3000,
+			pause: 2500,
+			hoverPause: true,
+			animationStart: function(current){
+				if (window.console && console.log) {
+					// example return of current slide number
+					console.log('animationStart on slide: ', current);
+				};
+			},
+			animationComplete: function(current){
+				if (window.console && console.log) {
+					// example return of current slide number
+					console.log('animationComplete on slide: ', current);
+				};
+			},
+		});
+	});
+</script>
+<div id="example">
+	<div id="slides">
+		<div class="slides_container" style="overflow: hidden; position: relative; display: block; background: url(&quot;/images/loading.gif&quot;) no-repeat scroll 50% 50% transparent;">
+			<?php foreach($ding_img_urls as $v):?>
+			<div class="slide" style="position: absolute; top: 0px; left: 300px; z-index: 0; display: none;">
+				<a target="_blank" title="Taxi " href="">
+				<img height="400" width="1090" alt="Slide 2" src="<?php echo $v;?>">
+				</a>
+			</div>
+			<?php endforeach;?>
+		</div>
+	</div>
+</div>
+<?php else:?>
+
+<?php endif;?>
+
+
+
 <div class="gs_btk">
 <div class="zuo"><img src="/images/<?php echo $navinfo['namepic'] ;?>"/></div>
 <div class="you">

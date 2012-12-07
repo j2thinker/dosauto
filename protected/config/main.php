@@ -52,11 +52,18 @@ return array(
 		),
 		*/
 		// uncomment the following to use a MySQL database
+		'db1'=>array(
+			'connectionString' => 'mysql:host=180.86.128.29;dbname=dosauto',
+			'emulatePrepare' => true,
+			'username' => 'dosauto_f',
+			'password' => 'root',
+			'charset' => 'utf8',
+		),
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=dosauto',
+			'connectionString' => 'mysql:host=10.210.213.74;port=3306;dbname=test',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => '123456',
 			'charset' => 'utf8',
 		),
 		'errorHandler'=>array(
@@ -81,7 +88,10 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 		//后台导航左侧模块
 		'adnav' => array(
-			"index"		=> array('轮播图管理'=>"/admin/switch"),
+			"index"	=> array(
+					'轮播图管理'=>"/focuspic/piclist",
+					'每页的图' => "/focuspic/focus",
+				),
 			"introman"	=> array(
 					"公司简介"=>'/adintro/company/1',
 					"品牌历史"=>'/adintro/company/2',
@@ -99,9 +109,9 @@ return array(
 					"保养讲堂"	=> "/newsman/classroom?cid=6",
 				),
 			"second"	=> array(
-					"二手车源"	=> "/newsman/activity?cid=3",
-					"二手车置换"	=> "/newsman/forsale?cid=4",
-					"汽车精品"	=> "/newsman/compnews?cid=1",
+					"二手车源"	=> "/second/list",
+					"二手车置换"	=> "/second/change",
+					"汽车精品"	=> "/second/best",
 				),
 			"show" => array(
 					"aaa"=>'/adintro/joinuscat',

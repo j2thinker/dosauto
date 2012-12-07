@@ -2,6 +2,7 @@
 
 class IntroController extends Controller
 {
+	public $page_id = 2;
 	/**
 	 * Declares class-based actions.
 	 */
