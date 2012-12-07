@@ -37,11 +37,29 @@ class SecondcarController extends Controller{
 	public function actionMarket()
 	{
 		$this->layout = "doslayout" ;
-		$id = yii::app()->request->getParam("id", 0);
 		$data = array() ;
-		$data = $this->actionList(true);
+		$id = yii::app()->request->getParam("id", 0);
 		if(!empty($id)){
 			$data['is_car_detail'] = true;			//是否为二手车详情页
+		} else {
+			$page = Yii::app()->request->getParam('page' , 1) ;
+			$pagesize = Yii::app()->request->getParam('pagesize' , 9) ;
+			
+			$criteria = new CDbCriteria();
+			$criteria->addCondition("is_best=0") ;				//普通二手车源 标识
+			$criteria->addCondition("state=0" ,'AND') ;  
+	        $criteria->order = 'ctime desc';
+	    	$count=SecondhandInfo::model()->count($criteria);	//获获二手车源记录总数
+		    if($count>0){
+	        	$criteria->offset = ($page -1) * $pagesize ;
+	        	$criteria->limit = $pagesize ;
+	        	$list = SecondhandInfo::model()->findAll($criteria) ;
+	        }
+	        $pager = new CPagination($count);
+	        $pager->pageSize	= $pagesize ;
+	        $pager->applyLimit($criteria) ;
+	        $data['pages'] = $pager ;
+	        $data['list'] = $list ;
 		}
 		$this->render('market' , $data) ;
 	}
@@ -57,7 +75,6 @@ class SecondcarController extends Controller{
 	
 	/**
 	 * 汽车精品
-	 * Enter description here ...
 	 */
 	public function actionBoutique(){
 		$this->layout = "doslayout" ;
@@ -66,7 +83,25 @@ class SecondcarController extends Controller{
 		if(!empty($id)){
 			$data['is_car_detail'] = true;			//是否为精品二手车详情页
 		}else{
-			$data = $this->actionBest();
+			$page = Yii::app()->request->getParam('page' , 1) ;
+			$pagesize = Yii::app()->request->getParam('pagesize' , 8) ;
+			
+			$criteria = new CDbCriteria();
+			$criteria->addCondition("is_best=1") ;				//精品二手车源 标识
+			$criteria->addCondition("state=0" ,'AND') ;  
+	        $criteria->order = 'ctime desc';
+	    	$count=SecondhandInfo::model()->count($criteria);	//获获二手车源记录总数
+		    if($count>0){
+	        	$criteria->offset = ($page -1) * $pagesize ;
+	        	$criteria->limit = $pagesize ;
+	        	$list = SecondhandInfo::model()->findAll($criteria) ;
+	        }
+	        $pager = new CPagination($count);
+	        $pager->pageSize	= $pagesize ;
+	        $pager->applyLimit($criteria) ;
+	        $data['pages'] = $pager ;
+	        $data['list'] = $list ;
+    
 		}
 		$this->render('boutique' , $data) ;
 	}

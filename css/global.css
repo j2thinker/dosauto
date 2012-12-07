@@ -8,7 +8,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0;
     outline: 0 none;
     padding: 0;
-    vertical-align: baseline;
+ /*   vertical-align: baseline; 这个元素设置的话会导致二手车的信息下移*/
 }
 :focus {
     outline: 0 none;
