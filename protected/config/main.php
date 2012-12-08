@@ -110,7 +110,7 @@ return array(
 				),
 			"second"	=> array(
 					"二手车源"	=> "/second/list",
-					"二手车置换"	=> "/second/change",
+					"二手车置换"	=> "/second/renewlist",
 					"汽车精品"	=> "/second/best",
 				),
 			"show" => array(

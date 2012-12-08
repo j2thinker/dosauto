@@ -106,6 +106,51 @@ class SecondController extends Controller{
 		$this->render('list', $data) ;
 	}
 	
+	//查看二手车置换数据列表
+	public function actionRenewList(){
+		$this->layout = "adright" ;
+		$page = Yii::app()->request->getParam('page' , 1) ;
+		$pagesize = Yii::app()->request->getParam('pagesize' , 2) ;
+		
+		$criteria = new CDbCriteria();
+		$criteria->order = 'ctime desc';
+		$count=AutoSecondhandChange::model()->count($criteria);	//获获二手车置换记录总数
+		
+		if($count>0){
+		  $criteria->offset = ($page -1) * $pagesize ;
+		  $criteria->limit = $pagesize ;
+		  $list = AutoSecondhandChange::model()->findAll($criteria) ;
+		}
+		$pager = new CPagination($count);
+		$pager->pageSize	= $pagesize ;
+		$pager->applyLimit($criteria) ;
+		
+		$data['pages'] = $pager ;
+		$data['list'] = $list ;	
+		$this->render('renewlist',$data);
+	}
+	
+	//删除某条二手车置换信息
+	public function actionRenewdel(){
+		$id = Yii::app()->request->getParam('id' , '') ;
+		$count  = AutoSecondhandChange::model()->deleteByPk($id);
+		if($count > 0){
+			$this->redirect('/index.php/second/renewlist');
+			echo '删除成功';
+		}else{
+			echo '删除失败';
+		}
+	}
+	
+	//查看某条二手车置换详情
+	public function actionRenewDetail(){
+		$id = Yii::app()->request->getParam('id' , '') ;
+		$obj = new AutoSecondhandChange();
+		$data['info'] = $obj->findByPk($id) ;
+		$this->render('renewdetail', $data);
+	
+	}
+	
 	//===============以下是前台展示==================
 	/**
 	 * 二手车源

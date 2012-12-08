@@ -105,4 +105,38 @@ class SecondcarController extends Controller{
 		}
 		$this->render('boutique' , $data) ;
 	}
+	
+	public function actionRenewadd(){
+		$model = new AutoSecondhandChange();
+		$request = Yii::app()->request ;
+		$model->cat					= 	$request->getParam('cat') ;
+		$model->motor_output		= 	$request->getParam('motor_output') ;
+		$model->gearbox				= 	$request->getParam('gearbox') ;
+		$model->roadhaul			= 	$request->getParam('roadhaul') ;
+		$model->motor_cate			= 	$request->getParam('motor_cate') ;
+		
+		$model->color				=	$request->getParam('color') ;
+		$model->ask_shop_name		= 	$request->getParam('ask_shop_name') ;
+		$model->plate_number_time	=	$request->getParam('plate_number_time') ;
+		$model->old_info			= 	$request->getParam('old_info') ;
+		$model->new_info			= 	$request->getParam('new_info') ;
+		$model->name				= 	$request->getParam('name') ;
+		$model->sex					= 	$request->getParam('sex') ;
+		$model->tel					= 	$request->getParam('tel') ;
+		$model->contact_addr		= 	$request->getParam('contact_addr') ;
+		$model->email				= 	$request->getParam('email') ;
+		$model->ctime				= 	time() ;	
+	
+		if($model->save()){
+			$this->redirect('/index.php/secondcar/renew');
+			
+			echo "success" ;
+			Yii::app()->end();
+			
+		}
+		echo "failed" ;	
+	
+	}
+	
+
 }
